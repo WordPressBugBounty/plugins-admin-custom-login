@@ -69,7 +69,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 							<img alt="paypal" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 						</form>
 					</td>
-					
 				</tr>
 			</table>
 		</div>
