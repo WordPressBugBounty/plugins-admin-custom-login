@@ -1,10 +1,10 @@
 ﻿=== Admin Custom Login ===
 Contributors: weblizar
-Donate link: https://www.weblizar.com/
+Donate link: https://weblizar.com/
 Tags: admin login page, custom login page, custom admin login, custom login, customize wordpress login page, design wordpress login
 Requires at least: 7.4
 Tested up to: 6.6.2
-Stable tag: 3.5.7
+Stable tag: 3.5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,12 +68,6 @@ Guys please send us your login screenshots at `lizarweb[at]gmail[dot]com`.
 
 * **Unlimited Color Scheme:** -Theere you able update plugin design with unlimited colours. Colour option is available for both login form panel and background
 
-#### Admin Custom Login Demo
-
-* [Admin Custom Login Demo](http://demo.weblizar.com/admin-custom-login-admin-demo/wp-admin)
-* **Username:** userdemo
-* **Password:** userdemo
-
 ### Admin Custom Login Pro Features
 
 * **Best Admin Page Customizer** - With multi functional and multi features A best WordPress login page costuming plugin.
@@ -124,15 +118,15 @@ Guys please send us your login screenshots at `lizarweb[at]gmail[dot]com`.
 
 = Live Admin Custom Login Pro Demos =
 
-* [Admin Custom Login Pro Demo](http://demo.weblizar.com/admin-custom-login-pro/wp-admin/)
-* [Admin Custom Login Pro Admin Demo](http://demo.weblizar.com/admin-custom-login-pro-admin-demo/wp-admin/)
+* [Admin Custom Login Pro Demo](http://demo.weblizar.com/admin-custom-login-pro/)
+* [Admin Custom Login Pro Admin Demo](http://demo.weblizar.com/admin-custom-login-pro/wp-admin/)
 * **Username:** userdemo
 * **Password:** userdemo
 
 ### Translations By Our Plugin Users:
 
 * Italian Translation(it_IT) by [Giovanni Caputo](http://giovannicaputo.netsons.org)
-* Hindi Translation (hi_HI) by [Infigo Software](http://infigosoft.com)
+* Hindi Translation (hi_HI) by [Intechno software](http://intechnosoftware.com)
 * German Translation(de_DE) or Deutsch by Markus Petautschnig aka X00LA
 * French Translation (fr_FR) by [Gilles Santacreu](http://www.boursikoter.com/)
 * Dutch Translation by [Markus P.](https://plus.google.com/+MarkusPetautschnig78)
@@ -178,7 +172,7 @@ It is really hard to continue development and support for this free plugin witho
 
 = Translators =
 
-Please contribute to translate our plugin.  Contact at `lizarweb (at) gmail (dot) com`.
+Please contribute to translate our plugin.  Contact at `admin@weblizar.com`.
 
 == Frequently Asked Questions ==
 
@@ -188,6 +182,10 @@ Please use WordPress [support forum](http://wordpress.org/support/plugin/admin-c
 == Changelog ==
 
 For more information, see [Weblizar](http://www.weblizar.com/)
+
+3.5.8 - [23-10-2024]
+*  change url changes
+
 
 3.5.7 - [15-10-2024]
 * Tested up to wp-6.6.2
