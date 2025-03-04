@@ -10,7 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<div class="post-social post-social-xs" id="post-social-5">
 						<div class="text-center padding-all text-center">
 							<div class="textbox text-white   margin-bottom settings-title">
-								<?php esc_html_e('Rate & Donate  Us', WEBLIZAR_ACL)?>
+								<?php // esc_html_e('Rate & Donate  Us', WEBLIZAR_ACL)?>
+								<?php esc_html_e('Rate', WEBLIZAR_ACL)?>
 							</div>
 						</div>
 					</div>
@@ -53,11 +54,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>	
 
-	<div class="panel panel-primary panel-default content-panel">
+	<!-- <div class="panel panel-primary panel-default content-panel">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Donate To Us', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php // esc_html_e('Donate To Us', WEBLIZAR_ACL)?></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span">
@@ -72,7 +73,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				</tr>
 			</table>
 		</div>
-	</div>
+	</div> -->
 </div>
 <!-- /row -->
-

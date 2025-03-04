@@ -146,7 +146,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-star fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Rate & Donate to Us', WEBLIZAR_ACL); ?></span>
+							<!-- <span class="sidebar-item-title"><?php // esc_html_e('Rate & Donate to Us', WEBLIZAR_ACL); ?></span> -->
+							<span class="sidebar-item-title"><?php esc_html_e('Rate', WEBLIZAR_ACL); ?></span>
 							<span class="sidebar-item-subtitle"><?php esc_html_e('if you like us', WEBLIZAR_ACL); ?></span>
 						</a>
 					</li>
