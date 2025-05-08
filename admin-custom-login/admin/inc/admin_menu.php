@@ -2,7 +2,7 @@
 <div class="wrap license-container">
 	<div class="panel panel-primary panel-default content-panel ">
         <div class="panel-body">
-			<img src=" <?php echo esc_url(WEBLIZAR_NALF_PLUGIN_URL. "/images/aclp.jpg") ?> class="img-responsive"> 
+			<img src=" <?php echo esc_url(WEBLIZAR_NALF_PLUGIN_URL. "/images/aclp.jpg") ?>" class="img-responsive"> 
         </div>
     </div>
 	<div class="clearfix"></div>

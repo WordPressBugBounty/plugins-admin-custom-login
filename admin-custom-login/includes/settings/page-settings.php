@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Logo Image Width',WEBLIZAR_ACL)?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
+					<th scope="row" ><?php esc_html_e('Logo Image Width',WEBLIZAR_ACL)?><p class="font-italic"><?php esc_html_e('(Use your left and right arrow keys to select the exact number)', WEBLIZAR_ACL); ?></p></th>
 					<td></td>
 				</tr>
 				<tr  class="radio-span" style="border-bottom:none;">
@@ -98,7 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Logo Image Height',WEBLIZAR_ACL)?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
+					<th scope="row" ><?php esc_html_e('Logo Image Height',WEBLIZAR_ACL)?><p class="font-italic"><?php esc_html_e('(Use your left and right arrow keys to select the exact number)', WEBLIZAR_ACL); ?></p></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span">

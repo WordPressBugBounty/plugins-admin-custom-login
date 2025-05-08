@@ -2200,9 +2200,9 @@ text-align: center;
 }
 
 @media (min-width: 901px){
-button.navbar-toggle {
-    display: none;
-}
+  button.navbar-toggle {
+      display: none;
+  }
 }
 .post-social-wrapper.clearfix {
     display: contents;
@@ -2235,10 +2235,10 @@ nav.navbar.navbar-default.navbar-static-top {
     padding: 8px;
 }
 .panel {
-    margin-bottom: 20px;
-  }
-  .pull-left, .pull-right {
-    padding: 10px;
+  margin-bottom: 20px;
+}
+.pull-left, .pull-right {
+  padding: 10px;
 }
 .form-table td h4 {
     font-size: 18px;
@@ -2252,11 +2252,10 @@ nav.navbar.navbar-default.navbar-static-top {
     font-size: 24px;
     padding: 25px;
 }
-}
 @media (min-width: 901px){
-.wp_btn-grup {
-    width: 80% !important;
-}
+  .wp_btn-grup {
+      width: 80% !important;
+  }
 }
 .wp-core-ui .notice.is-dismissible {
     padding-right: 0px;

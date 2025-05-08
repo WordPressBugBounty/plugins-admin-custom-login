@@ -301,8 +301,7 @@ function acl_footer_func() {
 			$site_key   = ( array_key_exists( 'site_key', $g_page ) ) ? $g_page['site_key'] : '';
 			$secret_key = ( array_key_exists( 'secret_key', $g_page ) ) ? $g_page['secret_key'] : '';
 		}
-			/*
-			$site_key = $g_page['site_key'];*/
+			/*$site_key = $g_page['site_key'];*/
 			/*$secret_key = $g_page['secret_key'];*/
 		?>
 
