@@ -1,4 +1,15 @@
 	/*	login-form-screen */
+.login .dashicons {
+    width: auto !important;
+    height: auto !important;
+    font-size: 20px !important;
+}
+
+.login .caps-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+    fill: currentColor;
+}
 
 p{
 	position:relative !important;
