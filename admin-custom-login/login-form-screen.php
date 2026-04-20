@@ -92,7 +92,7 @@ function acl_er_login_logo() {
 	require_once 'css/socialcss.php';
 	add_action( 'admin_print_scripts', 'acl_admin_font' );
 	function acl_admin_font() {
-		 wp_enqueue_script( 'wl-acl-font', WEBLIZAR_NALF_PLUGIN_URL . 'js/webfonts.js', array( 'jquery' ), true, false );
+		 wp_enqueue_script( 'wl-acl-font', WEBLIZAR_NALF_PLUGIN_URL . 'js/webfonts.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION, false );
 	}
 	?>
 	<?php
@@ -101,27 +101,27 @@ function acl_er_login_logo() {
 	?>
 	WebFont.load({
 	google: {
-	families: ['<?php echo esc_attr( $text_and_color_page['heading_font_style'] ); ?>'] // saved value
+	families: [<?php echo wp_json_encode( esc_attr( $text_and_color_page['heading_font_style'] ) ); ?>] // saved value
 	}
 	});
 	WebFont.load({
 	google: {
-	families: ["<?php echo esc_attr( $text_and_color_page['input_font_style'] ); ?>"] // saved value
+	families: [<?php echo wp_json_encode( esc_attr( $text_and_color_page['input_font_style'] ) ); ?>] // saved value
 	}
 	});
 	WebFont.load({
 	google: {
-	families: ["<?php echo esc_attr( $text_and_color_page['link_font_style'] ); ?>"] // saved value
+	families: [<?php echo wp_json_encode( esc_attr( $text_and_color_page['link_font_style'] ) ); ?>] // saved value
 	}
 	});
 	WebFont.load({
 	google: {
-	families: ["<?php echo esc_attr( $text_and_color_page['button_font_style'] ); ?>"] // saved value
+	families: [<?php echo wp_json_encode( esc_attr( $text_and_color_page['button_font_style'] ) ); ?>] // saved value
 	}
 	});
 	<?php $js .= ob_get_clean(); ?>
 	<?php
-	wp_register_script( 'wl-acl-font-config', 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js', array(), false, true );
+	wp_register_script( 'wl-acl-font-config', WEBLIZAR_NALF_PLUGIN_URL . 'js/webfont.js', array(), '1.6.28', true );
 	wp_enqueue_script( 'wl-acl-font-config' );
 	wp_add_inline_script( 'wl-acl-font-config', $js );
 	?>
@@ -143,10 +143,10 @@ function acl_er_login_logo() {
 	function my_login_logo_url_title() {
 		if ( get_option( 'Admin_custome_login_logo' ) ) {
 			$logo_page = unserialize( get_option( 'Admin_custome_login_logo' ) );
-			return $logo_page['logo_url_title'];
+			return esc_html( $logo_page['logo_url_title'] );
 			// make get option varibles and use
 		} else {
-			return esc_html_e( 'your site name and info', WEBLIZAR_ACL );
+			return esc_html_e( 'your site name and info', 'admin-custom-login' );
 			// create default variables and use
 		}
 	}
@@ -159,7 +159,7 @@ function acl_er_login_logo() {
 		$login_page = unserialize( get_option( 'Admin_custome_login_login' ) );
 		if ( ! empty( $login_page['log_form_above_msg'] ) ) {
 			$log_form_above_msg = $login_page['log_form_above_msg'];
-			return "<p class='login-msg-above'>" . html_entity_decode( stripslashes( $log_form_above_msg ) ) . '</p>';
+			return "<p class='login-msg-above'>" . wp_kses_post( stripslashes( $log_form_above_msg ) ) . '</p>';
 		} else {
 			return $message;
 		}
@@ -175,7 +175,7 @@ function acl_er_login_logo() {
 			}
 			if ( isset( $login_pass_reset_msg ) ) {
 				$message = '<p class="message reset-pass">'
-				. __( $login_pass_reset_msg )
+				. wp_kses_post( stripslashes( $login_pass_reset_msg ) )
 				. '</p>';
 			}
 			return $message;

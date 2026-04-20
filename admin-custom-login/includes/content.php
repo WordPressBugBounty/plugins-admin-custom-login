@@ -10,13 +10,13 @@ require_once('get_value.php');
 	<nav class="navbar navbar-default navbar-static-top" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only"><?php esc_html_e('Toggle navigation', WEBLIZAR_ACL) ?></span>
+				<span class="sr-only"><?php esc_html_e('Toggle navigation', 'admin-custom-login') ?></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
 			<a class="sidebar-toggle hidden-xs" href="javascript:void(0);"><i class="fa fa-bars fa-2x"></i></a>
-			<a class="navbar-brand coming-soon-admin-title" href="index.html" style="color:#dc3545;"><?php esc_html_e('Admin Custom Login', WEBLIZAR_ACL); ?></a>
+			<a class="navbar-brand coming-soon-admin-title" href="index.html" style="color:#dc3545;"><?php esc_html_e('Admin Custom Login', 'admin-custom-login'); ?></a>
 		</div>
 		<!-- /.navbar-header -->
 		<ul class="nav navbar-top-links navbar-right coming-soon-top">
@@ -48,8 +48,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fas fa-tachometer-alt fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Dashboard', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('application overview', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Dashboard', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('application overview', 'admin-custom-login'); ?></span>
 						</a>
 					</li>
 					<li>
@@ -58,8 +58,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Background Design', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('modify background design here', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Background Design', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('modify background design here', 'admin-custom-login'); ?></span>
 						</a>
 						<!-- /.nav-second-level -->
 					</li>
@@ -69,8 +69,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Login form Settings', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('modify login design here', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Login form Settings', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('modify login design here', 'admin-custom-login'); ?></span>
 						</a>
 						<!-- /.nav-second-level -->
 					</li>
@@ -80,8 +80,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fas fa-font fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Font Settings', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('modify login form style here', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Font Settings', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('modify login form style here', 'admin-custom-login'); ?></span>
 						</a>
 					</li>
 
@@ -91,8 +91,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-wrench fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Logo Settings', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('customize logo settings here', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Logo Settings', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('customize logo settings here', 'admin-custom-login'); ?></span>
 						</a>
 
 						<!-- /.nav-second-level -->
@@ -103,8 +103,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-table fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Social Settings', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('connect with your social profile', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Social Settings', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('connect with your social profile', 'admin-custom-login'); ?></span>
 						</a>
 					</li>
 
@@ -114,8 +114,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fab fa-google fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Google Captcha', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('configure captcha settings', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Google Captcha', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('configure captcha settings', 'admin-custom-login'); ?></span>
 						</a>
 					</li>
 
@@ -125,8 +125,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-upload fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Export / Import', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('import / export plugin settings', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Export / Import', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('import / export plugin settings', 'admin-custom-login'); ?></span>
 						</a>
 					</li>
 					<li>
@@ -135,8 +135,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-question fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Help And Support', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('ask your queries', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Help And Support', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('ask your queries', 'admin-custom-login'); ?></span>
 						</a>
 					</li>
 					
@@ -146,9 +146,9 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-star fa-stack-1x fa-inverse"></i>
 							</span>
-							<!-- <span class="sidebar-item-title"><?php // esc_html_e('Rate & Donate to Us', WEBLIZAR_ACL); ?></span> -->
-							<span class="sidebar-item-title"><?php esc_html_e('Rate', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('if you like us', WEBLIZAR_ACL); ?></span>
+							<!-- <span class="sidebar-item-title"><?php // esc_html_e('Rate & Donate to Us', 'admin-custom-login'); ?></span> -->
+							<span class="sidebar-item-title"><?php esc_html_e('Rate', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('if you like us', 'admin-custom-login'); ?></span>
 						</a>
 					</li>
 
@@ -158,8 +158,8 @@ require_once('get_value.php');
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-star fa-stack-1x fa-inverse"></i>
 							</span>
-							<span class="sidebar-item-title"><?php esc_html_e('Get Pro Version', WEBLIZAR_ACL); ?></span>
-							<span class="sidebar-item-subtitle"><?php esc_html_e('if love the plugin', WEBLIZAR_ACL); ?></span>
+							<span class="sidebar-item-title"><?php esc_html_e('Get Pro Version', 'admin-custom-login'); ?></span>
+							<span class="sidebar-item-subtitle"><?php esc_html_e('if love the plugin', 'admin-custom-login'); ?></span>
 						</a>
 					</li>
 				</ul>

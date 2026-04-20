@@ -70,16 +70,16 @@ add_filter( 'login_redirect', 'ACL_login_redirect', 10, 3 );
 /** load plugin translation */
 add_action( 'plugins_loaded', 'ACL_GetReadyTranslation' );
 function ACL_GetReadyTranslation() {
-	load_plugin_textdomain( WEBLIZAR_ACL, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'admin-custom-login', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 /*** Admin Custom Login menu */
 require_once 'login-form-screen.php';
 add_action( 'admin_menu', 'acl_weblizar_admin_custom_login_menu', 2 );
 function acl_weblizar_admin_custom_login_menu() {
 	if ( current_user_can( 'administrator' ) ) {
-		$wl_admin_menu = add_menu_page( esc_html__( 'Admin Custom Login', WEBLIZAR_ACL ), esc_html__( 'AC Login', WEBLIZAR_ACL ), 'manage_options', 'admin_custom_login', 'acl_admin_custom_login_content', 'dashicons-art', 10 );
+		$wl_admin_menu = add_menu_page( esc_html__( 'Admin Custom Login', 'admin-custom-login' ), esc_html__( 'AC Login', 'admin-custom-login' ), 'manage_options', 'admin_custom_login', 'acl_admin_custom_login_content', 'dashicons-art', 10 );
 		add_action( 'admin_print_styles-' . $wl_admin_menu, 'acl_admin_custom_login_css' );
-		$acl_menu = add_submenu_page( 'admin_custom_login', esc_html__( 'Settings', WEBLIZAR_ACL ), esc_html__( 'Settings', WEBLIZAR_ACL ), 'administrator', 'admin_custom_login', 'acl_admin_custom_login_content' );
+		$acl_menu = add_submenu_page( 'admin_custom_login', esc_html__( 'Settings', 'admin-custom-login' ), esc_html__( 'Settings', 'admin-custom-login' ), 'administrator', 'admin_custom_login', 'acl_admin_custom_login_content' );
 		add_action( 'admin_print_styles-' . $acl_menu, 'acl_admin_custom_login_css' );
 	}
 }
@@ -89,36 +89,36 @@ function acl_admin_custom_login_css() {
 		wp_enqueue_style( 'dashboard' );
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_style( 'thickbox' );
-		wp_register_style( 'bootstrap', WEBLIZAR_NALF_PLUGIN_URL . 'css/bootstrap.min.css' );
+		wp_register_style( 'bootstrap', WEBLIZAR_NALF_PLUGIN_URL . 'css/bootstrap.min.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'bootstrap' );
-		wp_register_style( 'wl-acl-isotop-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/isotope_css.css' );
+		wp_register_style( 'wl-acl-isotop-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/isotope_css.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-isotop-css' );
-		wp_register_style( 'wl-acl-smartech-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/smartech.css' );
+		wp_register_style( 'wl-acl-smartech-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/smartech.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-smartech-css' );
-		wp_register_style( 'wl-acl-jquery-ui-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/jquery-ui.css' );
+		wp_register_style( 'wl-acl-jquery-ui-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/jquery-ui.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-jquery-ui-css' );
-		wp_register_style( 'wl-acl-font-awesome_min', WEBLIZAR_NALF_PLUGIN_URL . 'css/fontawesome-all.min.css' );
+		wp_register_style( 'wl-acl-font-awesome_min', WEBLIZAR_NALF_PLUGIN_URL . 'css/fontawesome-all.min.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-font-awesome_min' );
-		wp_register_style( 'wl-acl-font-animate', WEBLIZAR_NALF_PLUGIN_URL . 'css/animate.css' );
+		wp_register_style( 'wl-acl-font-animate', WEBLIZAR_NALF_PLUGIN_URL . 'css/animate.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-font-animate' );
-		wp_register_style( 'wl-acl-fontawesome-iconpicker', WEBLIZAR_NALF_PLUGIN_URL . 'css/fontawesome-iconpicker.css' );
+		wp_register_style( 'wl-acl-fontawesome-iconpicker', WEBLIZAR_NALF_PLUGIN_URL . 'css/fontawesome-iconpicker.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-fontawesome-iconpicker' );
 
-		wp_register_style( 'wl-acl-dialog', WEBLIZAR_NALF_PLUGIN_URL . 'css/dialog/dialog.css' );
+		wp_register_style( 'wl-acl-dialog', WEBLIZAR_NALF_PLUGIN_URL . 'css/dialog/dialog.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-dialog' );
-		wp_register_style( 'wl-acl-dialog-box-style', WEBLIZAR_NALF_PLUGIN_URL . 'css/dialog/dialog-box-style.css' );
+		wp_register_style( 'wl-acl-dialog-box-style', WEBLIZAR_NALF_PLUGIN_URL . 'css/dialog/dialog-box-style.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-dialog-box-style' );
-		wp_register_style( 'wl-acl-dialog-jamie', WEBLIZAR_NALF_PLUGIN_URL . 'css/dialog/dialog-jamie.css' );
+		wp_register_style( 'wl-acl-dialog-jamie', WEBLIZAR_NALF_PLUGIN_URL . 'css/dialog/dialog-jamie.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-dialog-jamie' );
-		wp_register_style( 'wl-acl-custom-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/custom.css' );
+		wp_register_style( 'wl-acl-custom-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/custom.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-custom-css' );
 
-		wp_register_style( 'wl-acl-googleapis-css_01', 'https://fonts.googleapis.com/css?family=Dosis:600,700,800' );
+		wp_register_style( 'wl-acl-googleapis-css_01', 'https://fonts.googleapis.com/css?family=Dosis:600,700,800', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-googleapis-css_01' );
 
-		wp_register_style( 'wl-acl-googleapis-css_02', 'https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900' );
+		wp_register_style( 'wl-acl-googleapis-css_02', 'https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-googleapis-css_02' );
-		wp_register_style( 'wl-acl-googleapis-css_03', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Montserrat:400,700' );
+		wp_register_style( 'wl-acl-googleapis-css_03', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Montserrat:400,700', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'wl-acl-googleapis-css_03' );
 	}
 }
@@ -129,33 +129,33 @@ function acl_admin_custom_login_js() {
 	if ( strpos( $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'admin_custom_login' ) == true ) {
 		wp_enqueue_script( 'theme-preview' );
 		wp_enqueue_script( 'jquery' );
-		wp_register_script( 'popper', WEBLIZAR_NALF_PLUGIN_URL . 'js/popper.min.js' );
+		wp_register_script( 'popper', WEBLIZAR_NALF_PLUGIN_URL . 'js/popper.min.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'popper' );
-		wp_enqueue_script( 'wl-acl-media-uploads', WEBLIZAR_NALF_PLUGIN_URL . 'js/acl-media-upload-script.js', array( 'media-upload', 'thickbox', 'jquery' ) );
-		wp_enqueue_script( 'acl-color-picker-script', WEBLIZAR_NALF_PLUGIN_URL . 'js/acl-color-picker-script.js', array( 'wp-color-picker' ), false, true );
-		wp_register_script( 'bootstrap', WEBLIZAR_NALF_PLUGIN_URL . 'js/bootstrap.min.js' );
+		wp_enqueue_script( 'wl-acl-media-uploads', WEBLIZAR_NALF_PLUGIN_URL . 'js/acl-media-upload-script.js', array( 'media-upload', 'thickbox', 'jquery' ), WEBLIZAR_ACL_VERSION );
+		wp_enqueue_script( 'acl-color-picker-script', WEBLIZAR_NALF_PLUGIN_URL . 'js/acl-color-picker-script.js', array( 'wp-color-picker' ), WEBLIZAR_ACL_VERSION, true );
+		wp_register_script( 'bootstrap', WEBLIZAR_NALF_PLUGIN_URL . 'js/bootstrap.min.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'bootstrap' );
 		/* Localize the nonce */
 		wp_localize_script( 'bootstrap', 'WEBLIZARADMINNONCE', array( 'adminsecurity' => wp_create_nonce( 'weblizar_admin_nonce' ) ) );
-		wp_register_script( 'wl-acl-metisMenu', WEBLIZAR_NALF_PLUGIN_URL . 'js/plugins/metisMenu/metisMenu.min.js' );
+		wp_register_script( 'wl-acl-metisMenu', WEBLIZAR_NALF_PLUGIN_URL . 'js/plugins/metisMenu/metisMenu.min.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'wl-acl-metisMenu' );
-		wp_register_script( 'wl-aclsmartech', WEBLIZAR_NALF_PLUGIN_URL . 'js/smartech.js', array( 'jquery' ) );
+		wp_register_script( 'wl-aclsmartech', WEBLIZAR_NALF_PLUGIN_URL . 'js/smartech.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'wl-aclsmartech' );
-		wp_register_script( 'wl-acl-nalf-sidebar-nav', WEBLIZAR_NALF_PLUGIN_URL . 'js/nalf_sidebar_nav.js' );
+		wp_register_script( 'wl-acl-nalf-sidebar-nav', WEBLIZAR_NALF_PLUGIN_URL . 'js/nalf_sidebar_nav.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'wl-acl-nalf-sidebar-nav' );
-		wp_enqueue_script( 'wl-acl-media-upload-script-2-js', WEBLIZAR_NALF_PLUGIN_URL . 'js/acl-media-upload-script-2.js' );
-		wp_register_script( 'wl-acl-font-icon-picker-js', WEBLIZAR_NALF_PLUGIN_URL . 'js/fontawesome-iconpicker.js' );
+		wp_enqueue_script( 'wl-acl-media-upload-script-2-js', WEBLIZAR_NALF_PLUGIN_URL . 'js/acl-media-upload-script-2.js', array(), WEBLIZAR_ACL_VERSION );
+		wp_register_script( 'wl-acl-font-icon-picker-js', WEBLIZAR_NALF_PLUGIN_URL . 'js/fontawesome-iconpicker.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'wl-acl-font-icon-picker-js' );
 
-		wp_register_script( 'wl-acl-snap-svg-min', WEBLIZAR_NALF_PLUGIN_URL . 'js/dialog/snap.svg-min.js' );
+		wp_register_script( 'wl-acl-snap-svg-min', WEBLIZAR_NALF_PLUGIN_URL . 'js/dialog/snap.svg-min.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'wl-acl-snap-svg-min' );
-		wp_register_script( 'wl-acl-modernizr-custom', WEBLIZAR_NALF_PLUGIN_URL . 'js/dialog/modernizr.custom.js' );
+		wp_register_script( 'wl-acl-modernizr-custom', WEBLIZAR_NALF_PLUGIN_URL . 'js/dialog/modernizr.custom.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'wl-acl-modernizr-custom' );
-		wp_register_script( 'wl-acl-classie', WEBLIZAR_NALF_PLUGIN_URL . 'js/dialog/classie.js' );
+		wp_register_script( 'wl-acl-classie', WEBLIZAR_NALF_PLUGIN_URL . 'js/dialog/classie.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'wl-acl-classie' );
-		wp_register_script( 'wl-acl-dialogFx', WEBLIZAR_NALF_PLUGIN_URL . 'js/dialog/dialogFx.js' );
+		wp_register_script( 'wl-acl-dialogFx', WEBLIZAR_NALF_PLUGIN_URL . 'js/dialog/dialogFx.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'wl-acl-dialogFx' );
-		wp_register_script( 'wl-acl-dashboard', WEBLIZAR_NALF_PLUGIN_URL . 'js/dashboard.js' );
+		wp_register_script( 'wl-acl-dashboard', WEBLIZAR_NALF_PLUGIN_URL . 'js/dashboard.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'wl-acl-dashboard' );
 	}
 }
@@ -165,14 +165,14 @@ function acl_advanced_login_form_plugin() {
 	$dashboard_page = unserialize( get_option( 'Admin_custome_login_dashboard' ) );
 	$top_page       = unserialize( get_option( 'Admin_custome_login_top' ) );
 	if ( $top_page['top_bg_type'] == 'slider-background' && $dashboard_page['dashboard_status'] == 'enable' ) {
-		wp_register_script( 'modernizr', WEBLIZAR_NALF_PLUGIN_URL . 'js/modernizr.custom.86080.js' );
+		wp_register_script( 'modernizr', WEBLIZAR_NALF_PLUGIN_URL . 'js/modernizr.custom.86080.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'modernizr' );
-		wp_register_style( 'demo', WEBLIZAR_NALF_PLUGIN_URL . 'css/demo.css' );
+		wp_register_style( 'demo', WEBLIZAR_NALF_PLUGIN_URL . 'css/demo.css', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_style( 'demo' );
 	}
-	wp_register_style( 'wl-acl-font-awesome_min', WEBLIZAR_NALF_PLUGIN_URL . 'css/fontawesome-all.min.css' );
+	wp_register_style( 'wl-acl-font-awesome_min', WEBLIZAR_NALF_PLUGIN_URL . 'css/fontawesome-all.min.css', array(), WEBLIZAR_ACL_VERSION );
 	wp_enqueue_style( 'wl-acl-font-awesome_min' );
-	wp_register_style( 'wl-acl-custom-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/acl-custom.css' );
+	wp_register_style( 'wl-acl-custom-css', WEBLIZAR_NALF_PLUGIN_URL . 'css/acl-custom.css', array(), WEBLIZAR_ACL_VERSION );
 	wp_enqueue_style( 'wl-acl-custom-css' );
 }
 if ( isset( $dashboard_page['dashboard_status'] ) && $dashboard_page['dashboard_status'] == 'enable' ) {
@@ -248,7 +248,7 @@ function acl_footer_func() {
 	} else {
 		$label_password = 'Password';
 	}
-	wp_register_script( 'weblizar-acl-footer', '', array(), false, true );
+	wp_register_script( 'weblizar-acl-footer', '', array(), WEBLIZAR_ACL_VERSION, true );
 	wp_enqueue_script( 'weblizar-acl-footer' );
 
 	$js = '';
@@ -265,8 +265,15 @@ function acl_footer_func() {
 
 		<?php if ( $enable_inputbox_icon== 'yes' ) { ?>
 		if (jQuery('#lable_login_input').length) {
-			document.getElementById("lable_login_input").innerHTML="<?php echo esc_attr( $label_username ); ?><div class='input-container'> <div class='icon-ph'><i class='fa <?php echo esc_attr( $user_input_icon ); ?>'></i></div> <input id='user_login' name='log' class='input' type='text' placeholder='<?php echo esc_attr( $user_cust_lbl ); ?>'></div>";
-			document.getElementById("lable_password_input").innerHTML="<?php echo esc_attr( $label_password ); ?><div class='input-container'> <div class='icon-ph'><i  class='fa <?php echo esc_attr( $password_input_icon ); ?>'></i></div> <div class='icon-end'><i id='togglePassword' class='fa fa-eye'></i></div><input id='user_pass' name='pwd' class='input' type='password' placeholder='<?php echo esc_attr( $pass_cust_lbl ); ?>'></div>";
+			var labelUsername = <?php echo wp_json_encode( esc_html( $label_username ) ); ?>;
+			var userInputIcon = <?php echo wp_json_encode( esc_attr( $user_input_icon ) ); ?>;
+			var userCustLbl   = <?php echo wp_json_encode( esc_attr( $user_cust_lbl ) ); ?>;
+			document.getElementById("lable_login_input").innerHTML = labelUsername + "<div class='input-container'> <div class='icon-ph'><i class='fa " + userInputIcon + "'></i></div> <input id='user_login' name='log' class='input' type='text' placeholder='" + userCustLbl + "'></div>";
+
+			var labelPassword     = <?php echo wp_json_encode( esc_html( $label_password ) ); ?>;
+			var passwordInputIcon = <?php echo wp_json_encode( esc_attr( $password_input_icon ) ); ?>;
+			var passCustLbl       = <?php echo wp_json_encode( esc_attr( $pass_cust_lbl ) ); ?>;
+			document.getElementById("lable_password_input").innerHTML = labelPassword + "<div class='input-container'> <div class='icon-ph'><i  class='fa " + passwordInputIcon + "'></i></div> <div class='icon-end'><i id='togglePassword' class='fa fa-eye'></i></div><input id='user_pass' name='pwd' class='input' type='password' placeholder='" + passCustLbl + "'></div>";
 			jQuery('body.login div#login form .input, .login input[type="text"]').css('padding','5px 5px 5px 45px');
 			const togglePassword = document.querySelector("#togglePassword");
 			const password = document.querySelector("#user_pass");
@@ -289,8 +296,8 @@ function acl_footer_func() {
 		}
 		<?php } else { ?>
 		if (jQuery('#lable_login_input').length) {
-			jQuery('#loginform #user_login').attr('placeholder', '<?php echo esc_attr( $user_cust_lbl ); ?>');
-			jQuery('#loginform #user_pass').attr('placeholder', '<?php echo esc_attr( $pass_cust_lbl ); ?>');
+			jQuery('#loginform #user_login').attr('placeholder', <?php echo wp_json_encode( esc_attr( $user_cust_lbl ) ); ?>);
+			jQuery('#loginform #user_pass').attr('placeholder', <?php echo wp_json_encode( esc_attr( $pass_cust_lbl ) ); ?>);
 			jQuery('body.login div#login form .input, .login input[type="text"]').css('padding','5px 5px 5px 5px');
 		}
 		<?php } ?>
@@ -306,7 +313,7 @@ function acl_footer_func() {
 		?>
 
 		<?php if ( $top_page['top_bg_type'] == 'slider-background' ) { ?>
-		 jQuery('#screen').prepend('<ul class="cb-slideshow"> <li><span><?php esc_html_e( 'Image 01', WEBLIZAR_ACL ); ?></span></li> <li><span><?php esc_html_e( 'Image 02', WEBLIZAR_ACL ); ?></span></li> <li><span><?php esc_html_e( 'Image 03', WEBLIZAR_ACL ); ?></span></li><li><span><?php esc_html_e( 'Image 04', WEBLIZAR_ACL ); ?></span></li>  <li><span><?php esc_html_e( 'Image 05', WEBLIZAR_ACL ); ?></span></li> <li><span><?php esc_html_e( 'Image 06', WEBLIZAR_ACL ); ?></span></li></ul>')
+		 jQuery('#screen').prepend('<ul class="cb-slideshow"> <li><span><?php esc_html_e( 'Image 01', 'admin-custom-login' ); ?></span></li> <li><span><?php esc_html_e( 'Image 02', 'admin-custom-login' ); ?></span></li> <li><span><?php esc_html_e( 'Image 03', 'admin-custom-login' ); ?></span></li><li><span><?php esc_html_e( 'Image 04', 'admin-custom-login' ); ?></span></li>  <li><span><?php esc_html_e( 'Image 05', 'admin-custom-login' ); ?></span></li> <li><span><?php esc_html_e( 'Image 06', 'admin-custom-login' ); ?></span></li></ul>')
 		<?php } ?>
 
 		<!--enable Social Icon In inner login form-->
@@ -318,56 +325,39 @@ function acl_footer_func() {
 			$target = '_self';
 		}
 		?>
-		<?php if ( $Social_page['enable_social_icon'] == 'inner' || $Social_page['enable_social_icon'] == 'both' ) { ?>
-		jQuery( ".forgetmenot, #lostpasswordform" ).append('<div class="acl-social-inner" style="padding-top:16px"><div class="acl-social-text" style="color:<?php echo esc_attr( $heading_font_color ); ?>; font-size:<?php echo esc_attr( $heading_font_size ); ?>px; "><?php esc_html_e( 'Find Us On Social Media', WEBLIZAR_ACL ); ?></div><div style="padding-top:5px">
-																																										<?php
-																																										if ( $Social_page['social_twitter_link']!= '' ) {
-																																											?>
-			<a href="<?php echo esc_url( $Social_page['social_twitter_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
-																																											<?php
-																																										} if ( $Social_page['social_facebook_link']!= '' ) {
-																																											?>
-			 <a href="<?php echo esc_url( $Social_page['social_facebook_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button facebook"><i class="fab fa-facebook-f"></i><span></span></a>
-																																											<?php
-																																										} if ( $Social_page['social_linkedin_link']!= '' ) {
-																																											?>
-																																						 <a href="<?php echo esc_url( $Social_page['social_linkedin_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button linkedin"> <i class="fab fa-linkedin-in"> </i> <span></span> </a>
-																																											 <?php
-																																										} if ( $Social_page['social_pinterest_link']!= '' ) {
-																																											?>
-																																							<a href="<?php echo esc_url( $Social_page['social_pinterest_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button pinterest"><i class="fab fa-pinterest-p"></i><span></span></a>
-																																												<?php
-																																										} if ( $Social_page['social_digg_link']!= '' ) {
-																																											?>
-			<a href="<?php echo esc_url( $Social_page['social_digg_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button digg"><i class="fab fa-digg"></i><span></span></a>
-																																											<?php
-																																										} if ( $Social_page['social_youtube_link']!= '' ) {
-																																											?>
-																																								<a href="<?php echo esc_url( $Social_page['social_youtube_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button youtube"><i class="fab fa-youtube-square"></i><span></span></a>
-																																													<?php
-																																										} if ( $Social_page['social_flickr_link']!= '' ) {
-																																											?>
-	<a href="<?php echo esc_url( $Social_page['social_flickr_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button flickr"><i class="fab fa-flickr"></i><span></span></a>
-																																											<?php
-																																										} if ( $Social_page['social_tumblr_link']!= '' ) {
-																																											?>
-																																									<a href="<?php echo esc_url( $Social_page['social_tumblr_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button tumblr"><i class="fab fa-tumblr"></i><span></span></a>
-																																														<?php
-																																										} if ( $Social_page['social_skype_link']!= '' ) {
-																																											?>
-			<a href="<?php echo esc_url( $Social_page['social_skype_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button skype"><i class="fab fa-skype"></i><span></span></a>
-																																											<?php
-																																										} if ( $Social_page['social_instagram_link']!= '' ) {
-																																											?>
-																																										<a href="<?php echo esc_url( $Social_page['social_instagram_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
-																																															<?php
-																																										} if ( $Social_page['social_telegram_link']!= '' ) {
-																																											?>
+		<?php if ( $Social_page['enable_social_icon'] == 'inner' || $Social_page['enable_social_icon'] == 'both' ) {
+			ob_start(); ?>
+			<div class="acl-social-inner" style="padding-top:16px"><div class="acl-social-text" style="color:<?php echo esc_attr( $heading_font_color ); ?>; font-size:<?php echo esc_attr( $heading_font_size ); ?>px; "><?php esc_html_e( 'Find Us On Social Media', 'admin-custom-login' ); ?></div><div style="padding-top:5px">
+			<?php if ( $Social_page['social_twitter_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_twitter_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
+			<?php } if ( $Social_page['social_facebook_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_facebook_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button facebook"><i class="fab fa-facebook-f"></i><span></span></a>
+			<?php } if ( $Social_page['social_linkedin_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_linkedin_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button linkedin"> <i class="fab fa-linkedin-in"> </i> <span></span> </a>
+			<?php } if ( $Social_page['social_pinterest_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_pinterest_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button pinterest"><i class="fab fa-pinterest-p"></i><span></span></a>
+			<?php } if ( $Social_page['social_digg_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_digg_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button digg"><i class="fab fa-digg"></i><span></span></a>
+			<?php } if ( $Social_page['social_youtube_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_youtube_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button youtube"><i class="fab fa-youtube-square"></i><span></span></a>
+			<?php } if ( $Social_page['social_flickr_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_flickr_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button flickr"><i class="fab fa-flickr"></i><span></span></a>
+			<?php } if ( $Social_page['social_tumblr_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_tumblr_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button tumblr"><i class="fab fa-tumblr"></i><span></span></a>
+			<?php } if ( $Social_page['social_skype_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_skype_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button skype"><i class="fab fa-skype"></i><span></span></a>
+			<?php } if ( $Social_page['social_instagram_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_instagram_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
+			<?php } if ( $Social_page['social_telegram_link']!= '' ) { ?>
 				<a href="<?php echo esc_url( $Social_page['social_telegram_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button telegram"><i class="fab fa-telegram-plane"></i><span></span></a>
-																																											<?php
-																																										}if ( $Social_page['social_whatsapp_link']!= '' ) {
-																																											?>
-																																											<a href="<?php echo esc_url( $Social_page['social_whatsapp_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button whatsapp"><i class="fab fa-whatsapp"></i><span></span></a><?php } ?><div></div>' );
+			<?php } if ( $Social_page['social_whatsapp_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_whatsapp_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button whatsapp"><i class="fab fa-whatsapp"></i><span></span></a>
+			<?php } ?>
+			</div></div>
+			<?php
+			$social_inner_html = ob_get_clean();
+			?>
+			jQuery( ".forgetmenot, #lostpasswordform" ).append( <?php echo wp_json_encode( $social_inner_html ); ?> );
 		<?php } ?>
 		<!--enable Social Icon In outer login form-->
 		<?php
@@ -377,58 +367,41 @@ function acl_footer_func() {
 			$target = '_self';
 		}
 		?>
-		<?php if ( $Social_page['enable_social_icon'] == 'outer' || $Social_page['enable_social_icon'] == 'both' ) { ?>
-		jQuery( "#backtoblog" ).append('<div class="divsocial">
-			<?php
-			if ( $Social_page['social_twitter_link']!= '' ) {
-				?>
-			 <a href="<?php echo esc_url( $Social_page['social_twitter_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
-								 <?php
-			} if ( $Social_page['social_facebook_link']!= '' ) {
-				?>
-			<a href="<?php echo esc_url( $Social_page['social_facebook_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button facebook"><i class="fab fa-facebook-f"></i><span></span></a>
-								<?php
-			} if ( $Social_page['social_linkedin_link']!= '' ) {
-				?>
-														<a href="<?php echo esc_url( $Social_page['social_linkedin_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button linkedin"><i class="fab fa-linkedin-in"></i><span></span></a>
-																			<?php
-			} if ( $Social_page['social_pinterest_link']!= '' ) {
-				?>
-															<a href="<?php echo esc_url( $Social_page['social_pinterest_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button pinterest"><i class="fab fa-pinterest-p"></i><span></span></a>
-																				<?php
-			} if ( $Social_page['social_digg_link']!= '' ) {
-				?>
-			 <a href="<?php echo esc_url( $Social_page['social_digg_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button digg"><i class="fab fa-digg"></i><span></span></a>
-				<?php
-			} if ( $Social_page['social_youtube_link']!= '' ) {
-				?>
-																<a href="<?php echo esc_url( $Social_page['social_youtube_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button youtube"><i class="fab fa-youtube-square"></i><span></span></a>
-																					<?php
-			} if ( $Social_page['social_flickr_link']!= '' ) {
-				?>
-	<a href="<?php echo esc_url( $Social_page['social_flickr_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button flickr"><i class="fab fa-flickr"></i><span></span></a>
-				<?php
-			} if ( $Social_page['social_tumblr_link']!= '' ) {
-				?>
-																	<a href="<?php echo esc_url( $Social_page['social_tumblr_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button tumblr"><i class="fab fa-tumblr"></i><span></span></a>
-																						<?php
-			} if ( $Social_page['social_skype_link']!= '' ) {
-				?>
-			<a href="<?php echo esc_url( $Social_page['social_skype_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button skype"><i class="fab fa-skype"></i><span></span></a>
-				<?php
-			} if ( $Social_page['social_instagram_link']!= '' ) {
-				?>
-																		<a href="<?php echo esc_url( $Social_page['social_instagram_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
-																							<?php
-			}if ( $Social_page['social_telegram_link']!= '' ) {
-				?>
+		<?php if ( $Social_page['enable_social_icon'] == 'outer' || $Social_page['enable_social_icon'] == 'both' ) {
+			ob_start(); ?>
+			<div class="divsocial">
+			<?php if ( $Social_page['social_twitter_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_twitter_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
+			<?php } if ( $Social_page['social_facebook_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_facebook_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button facebook"><i class="fab fa-facebook-f"></i><span></span></a>
+			<?php } if ( $Social_page['social_linkedin_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_linkedin_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button linkedin"><i class="fab fa-linkedin-in"></i><span></span></a>
+			<?php } if ( $Social_page['social_pinterest_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_pinterest_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button pinterest"><i class="fab fa-pinterest-p"></i><span></span></a>
+			<?php } if ( $Social_page['social_digg_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_digg_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button digg"><i class="fab fa-digg"></i><span></span></a>
+			<?php } if ( $Social_page['social_youtube_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_youtube_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button youtube"><i class="fab fa-youtube-square"></i><span></span></a>
+			<?php } if ( $Social_page['social_flickr_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_flickr_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button flickr"><i class="fab fa-flickr"></i><span></span></a>
+			<?php } if ( $Social_page['social_tumblr_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_tumblr_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button tumblr"><i class="fab fa-tumblr"></i><span></span></a>
+			<?php } if ( $Social_page['social_skype_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_skype_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button skype"><i class="fab fa-skype"></i><span></span></a>
+			<?php } if ( $Social_page['social_instagram_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_instagram_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
+			<?php } if ( $Social_page['social_telegram_link']!= '' ) { ?>
 				<a href="<?php echo esc_url( $Social_page['social_telegram_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button telegram"><i class="fab fa-telegram-plane"></i><span></span></a>
-				<?php
-			}if ( $Social_page['social_whatsapp_link']!= '' ) {
-				?>
-																			<a href="<?php echo esc_url( $Social_page['social_whatsapp_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button whatsapp"><i class="fab fa-whatsapp"></i><span></span></a><?php } ?></div>');
+			<?php } if ( $Social_page['social_whatsapp_link']!= '' ) { ?>
+				<a href="<?php echo esc_url( $Social_page['social_whatsapp_link'] ); ?>" target="<?php echo esc_attr( $target ); ?>" class="icon-button whatsapp"><i class="fab fa-whatsapp"></i><span></span></a>
+			<?php } ?>
+			</div>
 			<?php
-		}
+			$social_outer_html = ob_get_clean();
+			?>
+			jQuery( "#backtoblog" ).append( <?php echo wp_json_encode( $social_outer_html ); ?> );
+		<?php } ?>
+<?php
 			$login_page = unserialize( get_option( 'Admin_custome_login_login' ) );
 		if ( isset( $login_page['tagline_msg'] ) ) {
 			$tagline_msg      = $login_page['tagline_msg'];
@@ -437,7 +410,8 @@ function acl_footer_func() {
 			$edit_tagline_msg = ' ';
 		}
 		?>
-		jQuery( "#backtoblog" ).append('<div class="divfooter"><?php echo wp_kses_post( $edit_tagline_msg ); ?></div>');
+		var taglineHtml = '<div class="divfooter">' + <?php echo wp_json_encode( wp_kses_post( $edit_tagline_msg ) ); ?> + '</div>';
+		jQuery( "#backtoblog" ).append( taglineHtml );
 	});
 
 	<?php
@@ -458,7 +432,7 @@ function acl_admin_custom_login_content() {
 function background_enqueue_script() {
 	if ( strpos( $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'admin_custom_login' ) == true ) {
 		$top_page = unserialize( get_option( 'Admin_custome_login_top' ) );
-		wp_register_script( 'wl-acl-background', WEBLIZAR_NALF_PLUGIN_URL . 'js/background.js', array( 'jquery' ), true, true );
+		wp_register_script( 'wl-acl-background', WEBLIZAR_NALF_PLUGIN_URL . 'js/background.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION, true );
 		wp_enqueue_script( 'wl-acl-background' );
 		if ( ! empty( $top_page ) ) {
 			wp_localize_script(
@@ -482,7 +456,7 @@ add_action( 'admin_enqueue_scripts', 'background_enqueue_script' );
 function text_and_color_enqueue() {
 	if ( strpos( $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'admin_custom_login' ) == true ) {
 		$text_and_color_page = unserialize( get_option( 'Admin_custome_login_text' ) );
-		wp_register_script( 'wl-acl-text-and-color', WEBLIZAR_NALF_PLUGIN_URL . 'js/textandcolor.js', array( 'jquery' ), true, true );
+		wp_register_script( 'wl-acl-text-and-color', WEBLIZAR_NALF_PLUGIN_URL . 'js/textandcolor.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION, true );
 		wp_enqueue_script( 'wl-acl-text-and-color' );
 		if ( ! empty( $text_and_color_page ) ) {
 			wp_localize_script(
@@ -509,7 +483,7 @@ function login_form_enqueue_script() {
 		$login_page          = unserialize( get_option( 'Admin_custome_login_login' ) );
 		$text_and_color_page = unserialize( get_option( 'Admin_custome_login_text' ) );
 		$Social_page         = unserialize( get_option( 'Admin_custome_login_Social' ) );
-		wp_register_script( 'wl-acl-login-form', WEBLIZAR_NALF_PLUGIN_URL . 'js/inlinejs/loginform.js', array( 'jquery' ), true, true );
+		wp_register_script( 'wl-acl-login-form', WEBLIZAR_NALF_PLUGIN_URL . 'js/inlinejs/loginform.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION, true );
 		wp_enqueue_script( 'wl-acl-login-form' );
 
 		// print_r($login_page);
@@ -551,7 +525,7 @@ add_action( 'admin_enqueue_scripts', 'page_settings_enqueue_script' );
 function page_settings_enqueue_script() {
 	if ( strpos( $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'admin_custom_login' ) == true ) {
 		$logo_page = unserialize( get_option( 'Admin_custome_login_logo' ) );
-		wp_register_script( 'wl-acl-page-settings', WEBLIZAR_NALF_PLUGIN_URL . 'js/inlinejs/pagesettings.js', array( 'jquery' ), true, true );
+		wp_register_script( 'wl-acl-page-settings', WEBLIZAR_NALF_PLUGIN_URL . 'js/inlinejs/pagesettings.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION, true );
 		wp_enqueue_script( 'wl-acl-page-settings' );
 		if ( ! empty( $logo_page ) ) {
 			wp_localize_script(
@@ -834,7 +808,7 @@ function acl_export_settings() {
 
 	nocache_headers();
 	header( 'Content-Type: application/json; charset=utf-8' );
-	header( 'Content-Disposition: attachment; filename=acl-settings-export-' . date( 'm-d-Y' ) . '.json' );
+	header( 'Content-Disposition: attachment; filename=acl-settings-export-' . gmdate( 'm-d-Y' ) . '.json' );
 	header( 'Expires: 0' );
 
 	echo json_encode( esc_attr( $ACL_ALL_Settings ) );
@@ -859,20 +833,22 @@ function acl_import_settings() {
 	list($oteher_extension, $extension) = explode( '.', $_FILES['import_file']['name'] );
 
 	if ( $extension != 'json' ) {
-		wp_die( esc_html__( 'Please upload a valid .json file', WEBLIZAR_ACL ) );
+		wp_die( esc_html__( 'Please upload a valid .json file', 'admin-custom-login' ) );
 	}
 
 	$import_file = $_FILES['import_file']['tmp_name'];
 
 	if ( empty( $import_file ) ) {
-		wp_die( esc_html__( 'Please upload a file to import', WEBLIZAR_ACL ) );
+		wp_die( esc_html__( 'Please upload a file to import', 'admin-custom-login' ) );
 	}
 
-	$stream = fopen( $import_file, 'r' );
+	global $wp_filesystem;
+	if ( empty( $wp_filesystem ) ) {
+		require_once ABSPATH . 'wp-admin/includes/file.php';
+		WP_Filesystem();
+	}
 
-	$c_settings = stream_get_contents( $stream );
-
-	fclose( $stream );
+	$c_settings = $wp_filesystem->get_contents( $import_file );
 
 	$settings = json_decode( $c_settings, true );
 

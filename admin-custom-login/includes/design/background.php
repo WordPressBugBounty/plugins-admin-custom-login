@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<div class="post-social post-social-xs" id="post-social-5">
 						<div class="text-center padding-all text-center">
 							<div class="textbox text-white   margin-bottom settings-title">
-								<?php esc_html_e('Background Design Setting', WEBLIZAR_ACL)?>
+								<?php esc_html_e('Background Design Setting', 'admin-custom-login')?>
 							</div>
 						</div>
 					</div>
@@ -24,16 +24,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Select Background', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Select Background', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span">
 					<td>
 						<select id="select-background" class="standard-dropdown" name="select-background" onchange='getComboid()'>
-							<option value="no-background" ><?php esc_html_e('No Background Selected', WEBLIZAR_ACL)?></option>
-							<optgroup label="<?php esc_html_e('Select Background', WEBLIZAR_ACL)?>">
-							<option value="static-background-color" <?php if ( $top_bg_type == 'static-background-color' ) { echo "selected"; } ?>><?php esc_html_e('Static Background Color', WEBLIZAR_ACL)?></option>
-							<option value="static-background-image" <?php if ( $top_bg_type == 'static-background-image' ) { echo "selected"; } ?>><?php esc_html_e('Static Background Image', WEBLIZAR_ACL)?></option>
+							<option value="no-background" ><?php esc_html_e('No Background Selected', 'admin-custom-login')?></option>
+							<optgroup label="<?php esc_html_e('Select Background', 'admin-custom-login')?>">
+							<option value="static-background-color" <?php if ( $top_bg_type == 'static-background-color' ) { echo "selected"; } ?>><?php esc_html_e('Static Background Color', 'admin-custom-login')?></option>
+							<option value="static-background-image" <?php if ( $top_bg_type == 'static-background-image' ) { echo "selected"; } ?>><?php esc_html_e('Static Background Image', 'admin-custom-login')?></option>
 							</optgroup>
 						</select>
 					</td>
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			<div class="panel-body">
 				<table class="form-table">
 					<tr>
-						<th scope="row" ><?php esc_html_e('Background Color', WEBLIZAR_ACL)?></th>
+						<th scope="row" ><?php esc_html_e('Background Color', 'admin-custom-login')?></th>
 						<td></td>
 					</tr>
 					<tr  class="radio-span">
@@ -71,18 +71,18 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			<div class="panel-body">
 				<table class="form-table">
 					<tr>
-						<th scope="row" ><?php esc_html_e('Background Image', WEBLIZAR_ACL)?></th>
+						<th scope="row" ><?php esc_html_e('Background Image', 'admin-custom-login')?></th>
 						<td></td>
 					</tr>
 					<tr class="radio-span">
 						<td>
-							<input type="text" class="pro_text" id="top_image" placeholder="<?php esc_attr_e('No media selected!', WEBLIZAR_ACL)?>" name="upload_image" value="<?php echo esc_attr($top_image); ?>"/>
+							<input type="text" class="pro_text" id="top_image" placeholder="<?php esc_attr_e('No media selected!', 'admin-custom-login')?>" name="upload_image" value="<?php echo esc_attr($top_image); ?>"/>
 
-							<input type="button" value="<?php esc_attr_e('Upload', WEBLIZAR_ACL)?>" id="upload-logo" class="button-primary rcsp_media_upload" />
+							<input type="button" value="<?php esc_attr_e('Upload', 'admin-custom-login')?>" id="upload-logo" class="button-primary rcsp_media_upload" />
 
-							<input type="button"  value="<?php esc_attr_e('Preview', WEBLIZAR_ACL)?>" data-toggle="modal" data-target="#top_about_us_image_builder" id="top-image-previewer" title="Font Awesome Icons"  class="button  " onclick="Acl_show_Image()" />
+							<input type="button"  value="<?php esc_attr_e('Preview', 'admin-custom-login')?>" data-toggle="modal" data-target="#top_about_us_image_builder" id="top-image-previewer" title="Font Awesome Icons"  class="button  " onclick="Acl_show_Image()" />
 
-							<input type="button" id="display-logo" value="<?php esc_attr_e('Remove', WEBLIZAR_ACL)?>" class="button" onclick="Acl_top_img_clear();" />
+							<input type="button" id="display-logo" value="<?php esc_attr_e('Remove', 'admin-custom-login')?>" class="button" onclick="Acl_top_img_clear();" />
 
 							<!-- Modal -->
 							<div class="modal " id="top_about_us_image_builder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -90,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 									<div class="modal-content">
 										<div class="modal-header">
 
-											<h4 class="modal-title" id="myModalLabel"><?php esc_html_e('Background Image', WEBLIZAR_ACL)?></h4>
+											<h4 class="modal-title" id="myModalLabel"><?php esc_html_e('Background Image', 'admin-custom-login')?></h4>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										</div>
 
@@ -99,7 +99,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 										</div>
 
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal"><?php esc_html_e('Close', WEBLIZAR_ACL)?></button>
+											<button type="button" class="btn btn-default" data-dismiss="modal"><?php esc_html_e('Close', 'admin-custom-login')?></button>
 										</div>
 									</div>
 								</div>
@@ -115,12 +115,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			<div class="panel-body">
 				<table class="form-table">
 					<tr>
-						<th scope="row" ><?php esc_html_e('Background Stretch', WEBLIZAR_ACL)?></th>
+						<th scope="row" ><?php esc_html_e('Background Stretch', 'admin-custom-login')?></th>
 						<td></td>
 					</tr>
 					<tr  class="radio-span">
 						<td>
-							<input type="checkbox" value="yes" id="bg-strech" name="strech-bg"  onclick="OnChangeCheckbox(this)" style="visibility: visible;" <?php if($top_cover=="yes"){echo esc_attr("checked");}?>/>&nbsp;<label for="bg-strech"><?php esc_html_e('Yes', WEBLIZAR_ACL)?></label>
+							<input type="checkbox" value="yes" id="bg-strech" name="strech-bg"  onclick="OnChangeCheckbox(this)" style="visibility: visible;" <?php if($top_cover=="yes"){echo esc_attr("checked");}?>/>&nbsp;<label for="bg-strech"><?php esc_html_e('Yes', 'admin-custom-login')?></label>
 						</td>
 					</tr>
 				</table>
@@ -132,16 +132,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				<div class="panel-body">
 					<table class="form-table">
 						<tr>
-							<th scope="row" ><?php esc_html_e('Background Repeat', WEBLIZAR_ACL)?></th>
+							<th scope="row" ><?php esc_html_e('Background Repeat', 'admin-custom-login')?></th>
 							<td></td>
 						</tr>
 						<tr class="radio-span">
 							<td>
 								<select id="top_bg_repeat" class="standard-dropdown" name="top_bg_repeat" >
-										<option value="no-repeat" ><?php esc_html_e('No Repeat', WEBLIZAR_ACL)?></option>
-										<option value="repeat" ><?php esc_html_e('Repeat', WEBLIZAR_ACL)?></option>
-										<option value="repeat-x" ><?php esc_html_e('Repeat Horizontally', WEBLIZAR_ACL)?></option>
-										<option value="repeat-y" ><?php esc_html_e('Repeat Vertically', WEBLIZAR_ACL)?></option>
+										<option value="no-repeat" ><?php esc_html_e('No Repeat', 'admin-custom-login')?></option>
+										<option value="repeat" ><?php esc_html_e('Repeat', 'admin-custom-login')?></option>
+										<option value="repeat-x" ><?php esc_html_e('Repeat Horizontally', 'admin-custom-login')?></option>
+										<option value="repeat-y" ><?php esc_html_e('Repeat Vertically', 'admin-custom-login')?></option>
 								</select>
 							</td>
 						</tr>
@@ -153,21 +153,21 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				<div class="panel-body">
 					<table class="form-table">
 						<tr>
-							<th scope="row" ><?php esc_html_e('Background Position', WEBLIZAR_ACL)?></th>
+							<th scope="row" ><?php esc_html_e('Background Position', 'admin-custom-login')?></th>
 							<td></td>
 						</tr>
 						<tr class="radio-span">
 							<td>
 								<select id="top_bg_position" class="standard-dropdown" name="top_bg_position"  >
-									<option value="left top" ><?php esc_html_e('Left Top', WEBLIZAR_ACL)?> </option>
-									<option value="left center" ><?php esc_html_e('Left Center', WEBLIZAR_ACL)?> </option>
-									<option value="left bottom" ><?php esc_html_e('Left Bottom', WEBLIZAR_ACL)?> </option>
-									<option value="right top" ><?php esc_html_e('Right Top', WEBLIZAR_ACL)?> </option>
-									<option value="right center" ><?php esc_html_e('Right Center', WEBLIZAR_ACL)?> </option>
-									<option value="right bottom" ><?php esc_html_e('Right Bottom', WEBLIZAR_ACL)?></option>
-									<option value="center top" ><?php esc_html_e('Center Top', WEBLIZAR_ACL)?> </option>
-									<option value="center" ><?php esc_html_e('Center Center', WEBLIZAR_ACL)?> </option>
-									<option value="center bottom" ><?php esc_html_e('Center Bottom', WEBLIZAR_ACL)?> </option>
+									<option value="left top" ><?php esc_html_e('Left Top', 'admin-custom-login')?> </option>
+									<option value="left center" ><?php esc_html_e('Left Center', 'admin-custom-login')?> </option>
+									<option value="left bottom" ><?php esc_html_e('Left Bottom', 'admin-custom-login')?> </option>
+									<option value="right top" ><?php esc_html_e('Right Top', 'admin-custom-login')?> </option>
+									<option value="right center" ><?php esc_html_e('Right Center', 'admin-custom-login')?> </option>
+									<option value="right bottom" ><?php esc_html_e('Right Bottom', 'admin-custom-login')?></option>
+									<option value="center top" ><?php esc_html_e('Center Top', 'admin-custom-login')?> </option>
+									<option value="center" ><?php esc_html_e('Center Center', 'admin-custom-login')?> </option>
+									<option value="center bottom" ><?php esc_html_e('Center Bottom', 'admin-custom-login')?> </option>
 								</select>
 							</td>
 						</tr>
@@ -179,15 +179,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				<div class="panel-body">
 					<table class="form-table">
 						<tr>
-							<th scope="row" ><?php esc_html_e('Background Attachment', WEBLIZAR_ACL)?></th>
+							<th scope="row" ><?php esc_html_e('Background Attachment', 'admin-custom-login')?></th>
 							<td></td>
 						</tr>
 						<tr class="radio-span">
 							<td>
 								<select id="top_bg_attachment" class="standard-dropdown" name="top_bg_attachment">
-										<option value="fixed" ><?php esc_html_e('Fixed', WEBLIZAR_ACL)?> </option>
-										<option value="scroll" ><?php esc_html_e('Scroll', WEBLIZAR_ACL)?> </option>
-										<option value="inherit" ><?php esc_html_e('Inherit', WEBLIZAR_ACL)?> </option>
+										<option value="fixed" ><?php esc_html_e('Fixed', 'admin-custom-login')?> </option>
+										<option value="scroll" ><?php esc_html_e('Scroll', 'admin-custom-login')?> </option>
+										<option value="inherit" ><?php esc_html_e('Inherit', 'admin-custom-login')?> </option>
 								</select>
 							</td>
 						</tr>
@@ -205,18 +205,18 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			<div class="panel-body">
 				<table class="form-table">
 					<tr>
-						<th scope="row" ><?php esc_html_e('No. Of Background Slideshow', WEBLIZAR_ACL)?></th>
+						<th scope="row" ><?php esc_html_e('No. Of Background Slideshow', 'admin-custom-login')?></th>
 						<td></td>
 					</tr>
 					<tr class="radio-span">
 						<td>
 							<select id="top_slideshow_no" class="standard-dropdown" name="top_slideshow_no" onchange="set_slideshow()">
-									<option value="0" ><?php esc_html_e('Select Number of Slide Show', WEBLIZAR_ACL)?> </option>
-									<option value="2" ><?php esc_html_e('2', WEBLIZAR_ACL)?> </option>
-									<option value="3" ><?php esc_html_e('3', WEBLIZAR_ACL)?> </option>
-									<option value="4" ><?php esc_html_e('4', WEBLIZAR_ACL)?> </option>
-									<option value="5" ><?php esc_html_e('5', WEBLIZAR_ACL)?> </option>
-									<option value="6" ><?php esc_html_e('6', WEBLIZAR_ACL)?> </option>
+									<option value="0" ><?php esc_html_e('Select Number of Slide Show', 'admin-custom-login')?> </option>
+									<option value="2" ><?php esc_html_e('2', 'admin-custom-login')?> </option>
+									<option value="3" ><?php esc_html_e('3', 'admin-custom-login')?> </option>
+									<option value="4" ><?php esc_html_e('4', 'admin-custom-login')?> </option>
+									<option value="5" ><?php esc_html_e('5', 'admin-custom-login')?> </option>
+									<option value="6" ><?php esc_html_e('6', 'admin-custom-login')?> </option>
 							</select>
 						</td>
 					</tr>
@@ -227,7 +227,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			<div class="panel-body">
 				<table class="form-table">
 					<tr>
-						<th scope="row" ><?php esc_html_e('No. Of Background Slideshow', WEBLIZAR_ACL)?></th>
+						<th scope="row" ><?php esc_html_e('No. Of Background Slideshow', 'admin-custom-login')?></th>
 						<td></td>
 					</tr>
 
@@ -259,17 +259,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			<div class="panel-body">
 				<table class="form-table">
 					<tr>
-						<th scope="row" ><?php esc_html_e('Slider Animation', WEBLIZAR_ACL)?></th>
+						<th scope="row" ><?php esc_html_e('Slider Animation', 'admin-custom-login')?></th>
 						<td></td>
 					</tr>
 					<tr class="radio-span">
 						<td>
 							<select id="top_bg_slider_animation" class="standard-dropdown" name="top_bg_slider_animation"  >
 
-									<option value="slider-style1" ><?php esc_html_e('Slider Animation 1', WEBLIZAR_ACL)?> </option>
-									<option value="slider-style2" ><?php esc_html_e('Slider Animation 2', WEBLIZAR_ACL)?> </option>
-									<option value="slider-style3" ><?php esc_html_e('Slider Animation 3', WEBLIZAR_ACL)?> </option>
-									<option value="slider-style4" ><?php esc_html_e('Slider Animation 4', WEBLIZAR_ACL)?> </option>
+									<option value="slider-style1" ><?php esc_html_e('Slider Animation 1', 'admin-custom-login')?> </option>
+									<option value="slider-style2" ><?php esc_html_e('Slider Animation 2', 'admin-custom-login')?> </option>
+									<option value="slider-style3" ><?php esc_html_e('Slider Animation 3', 'admin-custom-login')?> </option>
+									<option value="slider-style4" ><?php esc_html_e('Slider Animation 4', 'admin-custom-login')?> </option>
 							</select>
 						</td>
 					</tr>
@@ -278,7 +278,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<button data-dialog1="somedialog1" class="dialog-button1"><?php esc_html_e('Open Dialog', WEBLIZAR_ACL)?></button>
+	<button data-dialog1="somedialog1" class="dialog-button1"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
 	<div id="somedialog1" class="dialog">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content" >
@@ -288,12 +288,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				</svg>
 			</div>
 			<div class="dialog-inner">
-				<h2><strong><?php esc_html_e('Top Background', WEBLIZAR_ACL)?></strong> <?php esc_html_e('Setting Save Successfully', WEBLIZAR_ACL)?></h2><div><button class="action dialog-button-close" id="dialog-close-button1" data-dialog-close ><?php esc_html_e('Close', WEBLIZAR_ACL)?></button></div>
+				<h2><strong><?php esc_html_e('Top Background', 'admin-custom-login')?></strong> <?php esc_html_e('Setting Save Successfully', 'admin-custom-login')?></h2><div><button class="action dialog-button-close" id="dialog-close-button1" data-dialog-close ><?php esc_html_e('Close', 'admin-custom-login')?></button></div>
 			</div>
 		</div>
 	</div>
 
-	<button data-dialog11="somedialog11" class="dialog-close-button11"><?php esc_html_e('Open Dialog', WEBLIZAR_ACL)?></button>
+	<button data-dialog11="somedialog11" class="dialog-close-button11"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
 	<div id="somedialog11" class="dialog">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
@@ -303,7 +303,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				</svg>
 			</div>
 			<div class="dialog-inner">
-				<h2><strong><?php esc_html_e('Top Background', WEBLIZAR_ACL)?></strong> <?php esc_html_e('Setting Reset Successfully', WEBLIZAR_ACL)?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button11"><?php esc_html_e('Close', WEBLIZAR_ACL)?></button></div>
+				<h2><strong><?php esc_html_e('Top Background', 'admin-custom-login')?></strong> <?php esc_html_e('Setting Reset Successfully', 'admin-custom-login')?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button11"><?php esc_html_e('Close', 'admin-custom-login')?></button></div>
 			</div>
 		</div>
 	</div>
@@ -311,8 +311,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="panel panel-primary save-button-block">
 		<div class="panel-body">
 			<div class="pull-left">
-				<button type="button" onclick="return Custom_login_top('topbgSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes', WEBLIZAR_ACL)?></button>
-				<button type="button" onclick="return Custom_login_top('topbgReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default', WEBLIZAR_ACL)?></button>
+				<button type="button" onclick="return Custom_login_top('topbgSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes', 'admin-custom-login')?></button>
+				<button type="button" onclick="return Custom_login_top('topbgReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default', 'admin-custom-login')?></button>
 			</div>
 
 		</div>

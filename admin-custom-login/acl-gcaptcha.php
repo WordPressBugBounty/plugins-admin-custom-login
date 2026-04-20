@@ -67,7 +67,7 @@ function acl_validate_captcha2( $user, $password ) {
 		}
 	}
 
-	return new WP_Error( wp_kses_post( 'empty_captcha', '<strong>ERROR</strong>: Please confirm you are not a robot', WEBLIZAR_ACL ) );
+	return new WP_Error( wp_kses_post( 'empty_captcha', '<strong>ERROR</strong>: Please confirm you are not a robot', 'admin-custom-login' ) );
 }
 
 function acl_captcha3_form() {
@@ -116,7 +116,7 @@ function acl_validate_captcha3( $user, $password ) {
 		}
 	}
 
-	return new WP_Error( wp_kses_post( 'empty_captcha', '<strong>ERROR</strong>: Please confirm you are not a robot', WEBLIZAR_ACL ) );
+	return new WP_Error( wp_kses_post( 'empty_captcha', '<strong>ERROR</strong>: Please confirm you are not a robot', 'admin-custom-login' ) );
 }
 
 ?>

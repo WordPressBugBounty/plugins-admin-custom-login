@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<div class="post-social post-social-xs" id="post-social-5">
 						<div class="text-center padding-all text-center">
 							<div class="textbox text-white   margin-bottom settings-title">
-								<?php esc_html_e('Logo Settings',WEBLIZAR_ACL)?>
+								<?php esc_html_e('Logo Settings','admin-custom-login')?>
 							</div>
 						</div>
 					</div>
@@ -24,29 +24,29 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Logo Image',WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Logo Image','admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span">
 					<td>
-						<input type="text" class="pro_text" id="logo-image" placeholder="<?php esc_attr_e('No media selected!',WEBLIZAR_ACL)?>" name="upload_image" disabled="disabled"  value="<?php echo esc_attr($logo_image); ?>"/>
-						<input type="button" value="<?php esc_attr_e('Upload',WEBLIZAR_ACL)?>" id="upload-logo" class="button-primary rcsp_media_upload"/>
+						<input type="text" class="pro_text" id="logo-image" placeholder="<?php esc_attr_e('No media selected!','admin-custom-login')?>" name="upload_image" disabled="disabled"  value="<?php echo esc_attr($logo_image); ?>"/>
+						<input type="button" value="<?php esc_attr_e('Upload','admin-custom-login')?>" id="upload-logo" class="button-primary rcsp_media_upload"/>
 
-						<input type="button" id="display-logo" value="<?php esc_attr_e('Preview',WEBLIZAR_ACL)?>" data-toggle="modal" data-target="#logo_about_us_image_builder" class="button " onclick="Acl_show_Image_3()"/>
+						<input type="button" id="display-logo" value="<?php esc_attr_e('Preview','admin-custom-login')?>" data-toggle="modal" data-target="#logo_about_us_image_builder" class="button " onclick="Acl_show_Image_3()"/>
 
 						<!-- Modal -->
 						<div class="modal " id="logo_about_us_image_builder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-header">
-										<h4 class="modal-title" id="myModalLabel"><?php esc_html_e('Login Background Image',WEBLIZAR_ACL)?></h4>
+										<h4 class="modal-title" id="myModalLabel"><?php esc_html_e('Login Background Image','admin-custom-login')?></h4>
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 									</div>
 									<div class="modal-body">
 										<img class="show_prev_img" src="" style="width:100%; height:50%" id="logo_img_prev"/>
 									</div>
 									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal"><?php esc_html_e('Close',WEBLIZAR_ACL)?></button>
+										<button type="button" class="btn btn-default" data-dismiss="modal"><?php esc_html_e('Close','admin-custom-login')?></button>
 									</div>
 								</div>
 							</div>
@@ -60,16 +60,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Show Logo',WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Show Logo','admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span" style="border-bottom:none;">
 					<td>
 						<span>
-							<input <?php checked( $logo_show, 'yes', true ); ?> type="radio" name="show_logo" value="yes" id="logo_show1">&nbsp;<label for="logo_show1"><?php esc_html_e('Yes', WEBLIZAR_ACL)?></label><br>
+							<input <?php checked( $logo_show, 'yes', true ); ?> type="radio" name="show_logo" value="yes" id="logo_show1">&nbsp;<label for="logo_show1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
 						</span>
 						<span>
-							<input <?php checked( $logo_show, 'no', true ); ?>  type="radio" name="show_logo" value="no" id="logo_show2">&nbsp;<label for="logo_show2"><?php esc_html_e('No', WEBLIZAR_ACL)?></label><br>
+							<input <?php checked( $logo_show, 'no', true ); ?>  type="radio" name="show_logo" value="no" id="logo_show2">&nbsp;<label for="logo_show2"><?php esc_html_e('No', 'admin-custom-login')?></label><br>
 						</span>
 					</td>
 				</tr>
@@ -81,14 +81,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Logo Image Width',WEBLIZAR_ACL)?><p class="font-italic"><?php esc_html_e('(Use your left and right arrow keys to select the exact number)', WEBLIZAR_ACL); ?></p></th>
+					<th scope="row" ><?php esc_html_e('Logo Image Width','admin-custom-login')?><p class="font-italic"><?php esc_html_e('(Use your left and right arrow keys to select the exact number)', 'admin-custom-login'); ?></p></th>
 					<td></td>
 				</tr>
 				<tr  class="radio-span" style="border-bottom:none;">
 					<td>
 						<div id="logo-width-slider" class="size-slider" style="width: 25%;display:inline-block"></div>
 						<input type="text" class="slider-text" id="logo-width-text-box" name="headline-size-text-box"  readonly="readonly">
-						<span class="slider-text-span" style="width: 25%;display:inline-block"><?php esc_html_e('Px', WEBLIZAR_ACL)?></span>
+						<span class="slider-text-span" style="width: 25%;display:inline-block"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
 				</tr>
 			</table>
@@ -98,14 +98,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Logo Image Height',WEBLIZAR_ACL)?><p class="font-italic"><?php esc_html_e('(Use your left and right arrow keys to select the exact number)', WEBLIZAR_ACL); ?></p></th>
+					<th scope="row" ><?php esc_html_e('Logo Image Height','admin-custom-login')?><p class="font-italic"><?php esc_html_e('(Use your left and right arrow keys to select the exact number)', 'admin-custom-login'); ?></p></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span">
 					<td>
 						<div id="logo-height-slider" class="size-slider"style="width: 25%;display:inline-block"></div>
 						<input type="text" class="slider-text" id="logo-height-text-box" name="input-size-text-box"  readonly="readonly">
-						<span class="slider-text-span" style="width: 25%;display:inline-block"><?php esc_html_e('Px', WEBLIZAR_ACL)?></span>
+						<span class="slider-text-span" style="width: 25%;display:inline-block"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
 				</tr>
 			</table>
@@ -115,12 +115,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Logo Link URL',WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Logo Link URL','admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span">
 					<td>
-						<input type="text" class="pro_text" id="log-url" name="log-url" placeholder="<?php esc_attr_e('Logo Link URL',WEBLIZAR_ACL); ?>" size="56" value="<?php echo esc_attr($logo_url); ?>"/>
+						<input type="text" class="pro_text" id="log-url" name="log-url" placeholder="<?php esc_attr_e('Logo Link URL','admin-custom-login'); ?>" size="56" value="<?php echo esc_attr($logo_url); ?>"/>
 					</td>
 				</tr>
 			</table>
@@ -130,18 +130,18 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Logo Image Title',WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Logo Image Title','admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span">
 					<td>
-						<input type="text" class="pro_text" id="log-url-title" name="log-url-title" placeholder="<?php esc_attr_e('Logo Image Title', WEBLIZAR_ACL); ?>" size="56" value="<?php echo esc_attr($logo_url_title); ?>"/>
+						<input type="text" class="pro_text" id="log-url-title" name="log-url-title" placeholder="<?php esc_attr_e('Logo Image Title', 'admin-custom-login'); ?>" size="56" value="<?php echo esc_attr($logo_url_title); ?>"/>
 					</td>
 				</tr>
 			</table>
 		</div>
 	</div>
-	<button data-dialog4="somedialog4" class="dialog-button4"><?php esc_html_e('Open Dialog', WEBLIZAR_ACL)?></button>
+	<button data-dialog4="somedialog4" class="dialog-button4"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
 	<div id="somedialog4" class="dialog">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
@@ -151,11 +151,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				</svg>
 			</div>
 			<div class="dialog-inner">
-				<h2><strong><?php esc_html_e('Logo',WEBLIZAR_ACL)?></strong> <?php esc_html_e('Setting Save Successfully',WEBLIZAR_ACL)?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button4"><?php esc_html_e('Close',WEBLIZAR_ACL)?></button></div>
+				<h2><strong><?php esc_html_e('Logo','admin-custom-login')?></strong> <?php esc_html_e('Setting Save Successfully','admin-custom-login')?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button4"><?php esc_html_e('Close','admin-custom-login')?></button></div>
 			</div>
 		</div>
 	</div>
-	<button data-dialog10="somedialog10" class="dialog-button10"><?php esc_html_e('Open Dialog', WEBLIZAR_ACL)?></button>
+	<button data-dialog10="somedialog10" class="dialog-button10"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
 	<div id="somedialog10" class="dialog">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
@@ -165,14 +165,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				</svg>
 			</div>
 			<div class="dialog-inner">
-				<h2><strong><?php esc_html_e('Logo',WEBLIZAR_ACL)?></strong> <?php esc_html_e('Setting Reset Successfully',WEBLIZAR_ACL)?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button10"><?php esc_html_e('Close',WEBLIZAR_ACL)?></button></div>
+				<h2><strong><?php esc_html_e('Logo','admin-custom-login')?></strong> <?php esc_html_e('Setting Reset Successfully','admin-custom-login')?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button10"><?php esc_html_e('Close','admin-custom-login')?></button></div>
 			</div>
 		</div>
 	</div>
 	<div class="panel panel-primary save-button-block">
 		<div class="panel-body">
-				<button type="button" onclick="return Custom_login_logo('logoSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes',WEBLIZAR_ACL)?></button>
-				<button type="button" onclick="return Custom_login_logo('logoReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default',WEBLIZAR_ACL)?></button>
+				<button type="button" onclick="return Custom_login_logo('logoSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes','admin-custom-login')?></button>
+				<button type="button" onclick="return Custom_login_logo('logoReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default','admin-custom-login')?></button>
 		</div>
 	</div>
 </div>

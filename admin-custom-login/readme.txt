@@ -1,9 +1,9 @@
-﻿=== Admin Custom Login ===
+=== Admin Custom Login ===
 Contributors: weblizar
 Donate link: https://weblizar.com/
 Tags: admin login page, custom login page, custom admin login, custom login, customize wordpress login page
-Tested up to: 6.9.1
-Stable tag: 3.6.4
+Tested up to: 6.9
+Stable tag: 3.6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -181,6 +181,10 @@ Please use WordPress [support forum](http://wordpress.org/support/plugin/admin-c
 == Changelog ==
 
 For more information, see [Weblizar](http://www.weblizar.com/)
+
+
+3.6.5 - [20-04-2026]
+* Fixed:  security vulnerability issue
 
 3.6.4 - [23-02-2026]
 * Fixed: bugs

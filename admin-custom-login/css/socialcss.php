@@ -1,4 +1,4 @@
-<?php 
+<?php if ( ! defined( 'ABSPATH' ) ) exit;
 $Social_page               = unserialize(get_option('Admin_custome_login_Social'));
 $social_icon_size          = $Social_page['social_icon_size'];
 $social_icon_layout        = $Social_page['social_icon_layout'];

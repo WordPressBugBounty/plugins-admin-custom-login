@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<div class="post-social post-social-xs" id="post-social-5">
 						<div class="text-center padding-all text-center">
 							<div class="textbox text-white   margin-bottom settings-title">
-								<?php esc_html_e('Text And Color Settings', WEBLIZAR_ACL)?>
+								<?php esc_html_e('Text And Color Settings', 'admin-custom-login')?>
 							</div>
 						</div>
 					</div>
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Headline Font Color', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Headline Font Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Input Font Color', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Input Font Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Link Color', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Link Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
@@ -71,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Button Color', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Button Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
@@ -87,7 +87,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Login Button font Color', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Login Button font Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
@@ -103,14 +103,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Headline Font size', WEBLIZAR_ACL)?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
+					<th scope="row" ><?php esc_html_e('Headline Font size', 'admin-custom-login')?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
 					<td>
 						<div id="button-size-slider" class="size-slider" style="width: 25%;display:inline-block"></div>
 						<input type="text" class="slider-text" id="headline-size-text-box" name="headline-size-text-box"  readonly="readonly">
-						<span class="slider-text-span"><?php esc_html_e('Px', WEBLIZAR_ACL)?></span>
+						<span class="slider-text-span"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
 				</tr>
 			</table>
@@ -121,14 +121,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Input Font Size', WEBLIZAR_ACL)?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
+					<th scope="row" ><?php esc_html_e('Input Font Size', 'admin-custom-login')?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
 					<td>
 						<div id="button-size-slider2" class="size-slider" style="width: 25%;display:inline-block"></div>
 						<input type="text" class="slider-text" id="input-size-text-box" name="input-size-text-box"  readonly="readonly">
-						<span class="slider-text-span"><?php esc_html_e('Px', WEBLIZAR_ACL)?></span>
+						<span class="slider-text-span"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
 				</tr>
 			</table>
@@ -139,14 +139,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Link Font Size', WEBLIZAR_ACL)?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
+					<th scope="row" ><?php esc_html_e('Link Font Size', 'admin-custom-login')?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
 					<td>
 						<div id="button-size-slider3" class="size-slider" style="width: 25%;display:inline-block"></div>
 						<input type="text" class="slider-text" id="link-size-text-box" name="link-size-text-box"  readonly="readonly">
-						<span class="slider-text-span"><?php esc_html_e('Px', WEBLIZAR_ACL)?></span>
+						<span class="slider-text-span"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
 				</tr>
 			</table>
@@ -157,14 +157,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Button Font Size', WEBLIZAR_ACL)?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
+					<th scope="row" ><?php esc_html_e('Button Font Size', 'admin-custom-login')?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
 					<td>
 						<div id="button-size-slider7" class="size-slider" style="width: 25%;display:inline-block"></div>
 						<input type="text" class="slider-text" id="button-size-text-box" name="button-size-text-box"  readonly="readonly">
-						<span class="slider-text-span"><?php esc_html_e('Px', WEBLIZAR_ACL)?></span>
+						<span class="slider-text-span"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
 				</tr>
 			</table>
@@ -175,16 +175,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="panel-body">
 		<table class="form-table">
 			<tr>
-				<th scope="row" ><?php esc_html_e('Show Remember Me Field', WEBLIZAR_ACL)?></th>
+				<th scope="row" ><?php esc_html_e('Show Remember Me Field', 'admin-custom-login')?></th>
 				<td></td>
 			</tr>
 			<tr class="radio-span" style="border-bottom:none;">
 				<td>
 					<span>
-						<input type="radio" name="show_remember_me_field" value="yes" id="show_remember_me_field1" <?php if($show_remember_me_field=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="show_remember_me_field1"><?php esc_html_e('Yes', WEBLIZAR_ACL)?></label><br>
+						<input type="radio" name="show_remember_me_field" value="yes" id="show_remember_me_field1" <?php if($show_remember_me_field=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="show_remember_me_field1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
 					</span>
 					<span>
-						<input type="radio" name="show_remember_me_field" value="no" id="show_remember_me_field2" <?php if($show_remember_me_field=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="show_remember_me_field2"><?php esc_html_e('No', WEBLIZAR_ACL)?></label><br>
+						<input type="radio" name="show_remember_me_field" value="no" id="show_remember_me_field2" <?php if($show_remember_me_field=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="show_remember_me_field2"><?php esc_html_e('No', 'admin-custom-login')?></label><br>
 					</span>
 				</td>
 			</tr>
@@ -195,16 +195,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="panel-body">
 		<table class="form-table">
 			<tr>
-				<th scope="row" ><?php esc_html_e('Show Back To Site Link ', WEBLIZAR_ACL)?></th>
+				<th scope="row" ><?php esc_html_e('Show Back To Site Link ', 'admin-custom-login')?></th>
 				<td></td>
 			</tr>
 			<tr class="radio-span" style="border-bottom:none;">
 				<td>
 					<span>
-						<input type="radio" name="show_back_to_site_link" value="yes" id="show_back_to_site_link1" <?php if($show_back_to_site_link=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="show_back_to_site_link1"><?php esc_html_e('Yes', WEBLIZAR_ACL)?></label><br>
+						<input type="radio" name="show_back_to_site_link" value="yes" id="show_back_to_site_link1" <?php if($show_back_to_site_link=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="show_back_to_site_link1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
 					</span>
 					<span>
-						<input type="radio" name="show_back_to_site_link" value="no" id="show_back_to_site_link2" <?php if($show_back_to_site_link=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="show_back_to_site_link2"><?php esc_html_e('No', WEBLIZAR_ACL)?></label><br>
+						<input type="radio" name="show_back_to_site_link" value="no" id="show_back_to_site_link2" <?php if($show_back_to_site_link=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="show_back_to_site_link2"><?php esc_html_e('No', 'admin-custom-login')?></label><br>
 					</span>
 				</td>
 			</tr>
@@ -215,16 +215,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="panel-body">
 		<table class="form-table">
 			<tr>
-				<th scope="row" ><?php esc_html_e('Show Copyright link text', WEBLIZAR_ACL)?></th>
+				<th scope="row" ><?php esc_html_e('Show Copyright link text', 'admin-custom-login')?></th>
 				<td></td>
 			</tr>
 			<tr class="radio-span" style="border-bottom:none;">
 				<td>
 					<span>
-						<input type="radio" name="show_copyright_link_text" value="yes" id="show_copyright_link_text1" <?php if($show_copyright_link_text=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="show_copyright_link_text1"><?php esc_html_e('Yes', WEBLIZAR_ACL)?></label><br>
+						<input type="radio" name="show_copyright_link_text" value="yes" id="show_copyright_link_text1" <?php if($show_copyright_link_text=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="show_copyright_link_text1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
 					</span>
 					<span>
-						<input type="radio" name="show_copyright_link_text" value="no" id="show_copyright_link_text2" <?php if($show_copyright_link_text=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="show_copyright_link_text2"><?php esc_html_e('No', WEBLIZAR_ACL)?></label><br>
+						<input type="radio" name="show_copyright_link_text" value="no" id="show_copyright_link_text2" <?php if($show_copyright_link_text=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="show_copyright_link_text2"><?php esc_html_e('No', 'admin-custom-login')?></label><br>
 					</span>
 				</td>
 			</tr>
@@ -235,16 +235,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Enable Link shadow?', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Enable Link shadow?', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span" style="border-bottom:none;">
 					<td>
 						<span>
-							<input type="radio" name="enable_Link_shadow" value="yes" id="enable_Link_shadow1" <?php if($enable_link_shadow=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_Link_shadow1"><?php esc_html_e('Yes', WEBLIZAR_ACL)?></label><br>
+							<input type="radio" name="enable_Link_shadow" value="yes" id="enable_Link_shadow1" <?php if($enable_link_shadow=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_Link_shadow1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
 						</span>
 						<span>
-							<input type="radio" name="enable_Link_shadow" value="no" id="enable_Link_shadow2" <?php if($enable_link_shadow=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_Link_shadow2"><?php esc_html_e('No', WEBLIZAR_ACL)?></label><br>
+							<input type="radio" name="enable_Link_shadow" value="no" id="enable_Link_shadow2" <?php if($enable_link_shadow=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_Link_shadow2"><?php esc_html_e('No', 'admin-custom-login')?></label><br>
 						</span>
 					</td>
 				</tr>
@@ -256,7 +256,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Link Shadow Color', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Link Shadow Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr  style="border-bottom:none;">
@@ -272,7 +272,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Headline Font Style', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Headline Font Style', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<?php $RPP_Font_Style=""; ?>
@@ -303,8 +303,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 								         
 								    } 
 								?>
-								<option value="ntf-grandregular"><?php esc_html_e('NTF Grand Regular', WEBLIZAR_ACL)?></option>
-								<option value="jameel_noori_nastaleeqregular"><?php esc_html_e('Jameel Noori Nastaleeq', WEBLIZAR_ACL)?></option>
+								<option value="ntf-grandregular"><?php esc_html_e('NTF Grand Regular', 'admin-custom-login')?></option>
+								<option value="jameel_noori_nastaleeqregular"><?php esc_html_e('Jameel Noori Nastaleeq', 'admin-custom-login')?></option>
 							</optgroup>	
 						</select>
 					</td>
@@ -317,7 +317,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Input Font Style', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Input Font Style', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<?php $RPP_Font_Style=""; ?>
@@ -345,8 +345,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			                                }
 		                            } 
 		                        ?>
-		                        <option value="ntf-grandregular"><?php esc_html_e('NTF Grand Regular', WEBLIZAR_ACL)?></option>
-		                        <option value="jameel_noori_nastaleeqregular"><?php esc_html_e('Jameel Noori Nastaleeq', WEBLIZAR_ACL)?></option>
+		                        <option value="ntf-grandregular"><?php esc_html_e('NTF Grand Regular', 'admin-custom-login')?></option>
+		                        <option value="jameel_noori_nastaleeqregular"><?php esc_html_e('Jameel Noori Nastaleeq', 'admin-custom-login')?></option>
 							</optgroup>	
 						</select>
 					</td>
@@ -359,7 +359,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Link Font Style', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Link Font Style', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<?php $RPP_Font_Style=""; ?>
@@ -388,8 +388,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		                                
 		                            } 
 		                        ?>
-		                        <option value="ntf-grandregular"><?php esc_html_e('NTF Grand Regular', WEBLIZAR_ACL)?></option>
-		                        <option value="jameel_noori_nastaleeqregular"><?php esc_html_e('Jameel Noori Nastaleeq', WEBLIZAR_ACL)?></option>
+		                        <option value="ntf-grandregular"><?php esc_html_e('NTF Grand Regular', 'admin-custom-login')?></option>
+		                        <option value="jameel_noori_nastaleeqregular"><?php esc_html_e('Jameel Noori Nastaleeq', 'admin-custom-login')?></option>
 							</optgroup>	
 						</select>
 					</td>
@@ -403,7 +403,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Button Font Style', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Button Font Style', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<?php $RPP_Font_Style=""; ?>
@@ -432,8 +432,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 		                            } 
 		                        ?>
-		                        <option value="ntf-grandregular"><?php esc_html_e('NTF Grand Regular', WEBLIZAR_ACL)?></option>
-		                        <option value="jameel_noori_nastaleeqregular"><?php esc_html_e('Jameel Noori Nastaleeq', WEBLIZAR_ACL)?></option>
+		                        <option value="ntf-grandregular"><?php esc_html_e('NTF Grand Regular', 'admin-custom-login')?></option>
+		                        <option value="jameel_noori_nastaleeqregular"><?php esc_html_e('Jameel Noori Nastaleeq', 'admin-custom-login')?></option>
 							</optgroup>	
 						</select>
 					</td>
@@ -446,16 +446,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Enable Input Box Icon?', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Enable Input Box Icon?', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr class="radio-span" style="border-bottom:none;">
 					<td>
 						<span>
-							<input type="radio" name="enable_inputbox_icon" value="yes" id="enable_inputbox_icon1" <?php if($enable_inputbox_icon=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_inputbox_icon1"><?php esc_html_e('Yes', WEBLIZAR_ACL)?></label><br>
+							<input type="radio" name="enable_inputbox_icon" value="yes" id="enable_inputbox_icon1" <?php if($enable_inputbox_icon=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_inputbox_icon1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
 						</span>
 						<span>	
-							<input type="radio" name="enable_inputbox_icon" value="no" id="enable_inputbox_icon2" <?php if($enable_inputbox_icon=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_inputbox_icon2"><?php esc_html_e('No', WEBLIZAR_ACL)?></label><br>
+							<input type="radio" name="enable_inputbox_icon" value="no" id="enable_inputbox_icon2" <?php if($enable_inputbox_icon=="no")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_inputbox_icon2"><?php esc_html_e('No', 'admin-custom-login')?></label><br>
 						</span>
 					</td>
 				</tr>
@@ -466,7 +466,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Icon For user Input Box', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Icon For user Input Box', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr class="" style="border-bottom:none;">
@@ -487,7 +487,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
-					<th scope="row" ><?php esc_html_e('Icon For Password Input Box', WEBLIZAR_ACL)?></th>
+					<th scope="row" ><?php esc_html_e('Icon For Password Input Box', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
 				<tr class="" style="border-bottom:none;">
@@ -505,7 +505,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<button data-dialog3="somedialog3" class="dialog-button3" style="display:none"><?php esc_html_e('Open Dialog', WEBLIZAR_ACL)?>
+	<button data-dialog3="somedialog3" class="dialog-button3" style="display:none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?>
 </button>
 	<div id="somedialog3" class="dialog" style="position: fixed; z-index: 9999;">
 		<div class="dialog__overlay"></div>
@@ -516,12 +516,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				</svg>
 			</div>
 			<div class="dialog-inner">
-				<h2><strong><?php esc_html_e('Text and Color', WEBLIZAR_ACL); ?></strong> <?php esc_html_e('Setting Save Successfully', WEBLIZAR_ACL)?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button3"><?php esc_html_e('Close', WEBLIZAR_ACL)?></button></div>
+				<h2><strong><?php esc_html_e('Text and Color', 'admin-custom-login'); ?></strong> <?php esc_html_e('Setting Save Successfully', 'admin-custom-login')?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button3"><?php esc_html_e('Close', 'admin-custom-login')?></button></div>
 			</div>
 		</div>
 	</div>
 
-	<button data-dialog9="somedialog9" class="dialog-button9" style="display:none"><?php esc_html_e('Open Dialog', WEBLIZAR_ACL)?></button>
+	<button data-dialog9="somedialog9" class="dialog-button9" style="display:none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
 	<div id="somedialog9" class="dialog" style="position: fixed; z-index: 9999;">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
@@ -531,15 +531,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				</svg>
 			</div>
 			<div class="dialog-inner">
-				<h2><strong><?php esc_html_e('Text and Color', WEBLIZAR_ACL)?></strong> <?php esc_html_e('Setting Reset Successfully', WEBLIZAR_ACL)?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button9"><?php esc_html_e('Close', WEBLIZAR_ACL)?></button></div>
+				<h2><strong><?php esc_html_e('Text and Color', 'admin-custom-login')?></strong> <?php esc_html_e('Setting Reset Successfully', 'admin-custom-login')?></h2><div><button class="action dialog-button-close" data-dialog-close id="dialog-close-button9"><?php esc_html_e('Close', 'admin-custom-login')?></button></div>
 			</div>
 		</div>
 	</div>
 	
 	<div class="panel panel-primary save-button-block" >
 		<div class="panel-body">
-				<button type="button" onclick="return Custom_login_text('textandcolorSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes', WEBLIZAR_ACL)?></button>
-				<button type="button" onclick="return Custom_login_text('textandcolorReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default', WEBLIZAR_ACL)?></button>
+				<button type="button" onclick="return Custom_login_text('textandcolorSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes', 'admin-custom-login')?></button>
+				<button type="button" onclick="return Custom_login_text('textandcolorReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default', 'admin-custom-login')?></button>
 		</div>
 	</div>
 </div>

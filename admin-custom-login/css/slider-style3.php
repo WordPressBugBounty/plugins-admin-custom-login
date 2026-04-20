@@ -1,4 +1,4 @@
-<?php 
+<?php if ( ! defined( 'ABSPATH' ) ) exit;
 $top_page = unserialize(get_option('Admin_custome_login_top'));
 $top_slideshow_no = $top_page['top_slideshow_no'];
 $Slidshow_image = unserialize(get_option('Admin_custome_login_Slidshow'));

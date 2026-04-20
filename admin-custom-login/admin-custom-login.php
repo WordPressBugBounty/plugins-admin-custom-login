@@ -2,13 +2,14 @@
 
 /**
  * Plugin Name: Admin Custom Login
- * Version: 3.6.4
+ * Version: 3.6.5
  * Description: Customize Your WordPress Login Screen Amazingly - Add Own Logo, Add Social Profiles, Login Form Positions, Background Image Slide Show
  * Author: Weblizar
  * Author URI: https://weblizar.com/plugins/
  * Plugin URI: https://wordpress.org/plugins/admin-custom-login/
  * Text Domain: admin-custom-login
  * Domain Path: /languages
+ * License: GPLv2 or later
  */
 
 /** Exit if accessed directly **/
@@ -18,6 +19,7 @@ if (! defined('ABSPATH')) {
 define('WEBLIZAR_NALF_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('WEBLIZAR_ACL_PLUGIN_DIR_PATH_FREE', plugin_dir_path(__FILE__));
 define('WEBLIZAR_ACL', 'admin-custom-login');
+define('WEBLIZAR_ACL_VERSION', '3.6.5');
 
 final class WL_ACL_FREE
 {
@@ -57,8 +59,8 @@ function ACL_WeblizarDoInstallation()
  */
 function acl_links($links)
 {
-	$acl_pro_link      = '<a href="https://weblizar.com/plugins/admin-custom-login-pro/" target="_blank">' . esc_html__('Go Pro', WEBLIZAR_ACL) . '</a>';
-	$acl_settings_link = '<a href="admin.php?page=admin_custom_login">' . esc_html__('Settings', WEBLIZAR_ACL) . '</a>';
+	$acl_pro_link      = '<a href="https://weblizar.com/plugins/admin-custom-login-pro/" target="_blank">' . esc_html__('Go Pro', 'admin-custom-login') . '</a>';
+	$acl_settings_link = '<a href="admin.php?page=admin_custom_login">' . esc_html__('Settings', 'admin-custom-login') . '</a>';
 	array_unshift($links, $acl_settings_link);
 	array_unshift($links, $acl_pro_link);
 	return $links;
