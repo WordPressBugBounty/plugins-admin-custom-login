@@ -9,6 +9,7 @@
 	
 			jQuery('#side-menu > li > ul.in').collapse("hide");
 			jQuery('ul.options_tabs li').removeClass('active');
+			jQuery('#side-menu > li').removeClass('active');
 			
 			jQuery(this).parent().addClass('active');
 			jQuery('ul.nav li li a').removeClass('active');
@@ -54,8 +55,10 @@
 		
 	});
 	
-	
-	
-	
+	// sidebar collapse toggle
+	jQuery('.sidebar-toggle').click(function(e) {
+		e.preventDefault();
+		jQuery('#wrapper').toggleClass('collapsed-sidebar');
+	});
 });
  

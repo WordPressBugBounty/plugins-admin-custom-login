@@ -2,7 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-$g_page = unserialize( get_option( 'Admin_custome_login_gcaptcha' ) );
+$g_page = maybe_unserialize(get_option( 'Admin_custome_login_gcaptcha' ));
 
 if ( isset( $g_page['login_enable_gcaptcha'] ) && ( 'yes' === $g_page['login_enable_gcaptcha'] ) && isset( $g_page['login_v_gcaptcha'] ) && ! empty( $g_page['login_v_gcaptcha'] ) ) {
 
@@ -20,7 +20,7 @@ if ( isset( $g_page['login_enable_gcaptcha'] ) && ( 'yes' === $g_page['login_ena
 }
 
 function acl_captcha2_form() {
-	$g_page             = unserialize( get_option( 'Admin_custome_login_gcaptcha' ) );
+	$g_page             = maybe_unserialize(get_option( 'Admin_custome_login_gcaptcha' ));
 	$site_key           = isset( $g_page['site_key'] ) ? $g_page['site_key'] : '';
 	$acl_gcaptcha_theme = isset( $g_page['acl_gcaptcha_theme'] ) ? $g_page['acl_gcaptcha_theme'] : 'light';
 	if ( 'yes' === $acl_gcaptcha_theme ) {
@@ -45,7 +45,7 @@ function acl_captcha2_output() {
  * @return void
  */
 function acl_validate_captcha2( $user, $password ) {
-	$g_page     = unserialize( get_option( 'Admin_custome_login_gcaptcha' ) );
+	$g_page     = maybe_unserialize(get_option( 'Admin_custome_login_gcaptcha' ));
 	$secret_key = isset( $g_page['secret_key'] ) ? $g_page['secret_key'] : '';
 
 	if ( isset( $_POST['g-recaptcha-response'] ) ) {
@@ -77,7 +77,7 @@ function acl_captcha3_form() {
 }
 
 function acl_captcha3_output() {
-	$g_page = unserialize( get_option( 'Admin_custome_login_gcaptcha' ) );
+	$g_page = maybe_unserialize(get_option( 'Admin_custome_login_gcaptcha' ));
 	$site_key_v3 = isset( $g_page['site_key_v3'] ) ? $g_page['site_key_v3'] : '';
 
 	wp_enqueue_script( 'acl-recaptcha-api-js', "https://www.google.com/recaptcha/api.js?render=$site_key_v3" );
@@ -93,7 +93,7 @@ function acl_captcha3_output() {
 }
 
 function acl_validate_captcha3( $user, $password ) {
-	$g_page = unserialize( get_option( 'Admin_custome_login_gcaptcha' ) );
+	$g_page = maybe_unserialize(get_option( 'Admin_custome_login_gcaptcha' ));
 
 	$secret_key_v3 = isset( $g_page['secret_key_v3'] ) ? $g_page['secret_key_v3'] : '';
 

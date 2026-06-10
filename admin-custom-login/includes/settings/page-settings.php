@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -76,7 +76,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 
 			<table class="form-table">
@@ -94,7 +94,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -111,7 +111,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -126,7 +126,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -139,6 +139,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					</td>
 				</tr>
 			</table>
+		</div>
+	</div>
+
+	<div class="col-md-12 save-card-block save-card-block-custom">
+		<div class="save-button-block save-button-block-custom">
+			<button type="button" onclick="return Custom_login_logo('logoSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes','admin-custom-login')?></button>
+			<button type="button" onclick="return Custom_login_logo('logoReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default','admin-custom-login')?></button>
 		</div>
 	</div>
 	<button data-dialog4="somedialog4" class="dialog-button4"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
@@ -169,27 +176,21 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-primary save-button-block">
-		<div class="panel-body">
-				<button type="button" onclick="return Custom_login_logo('logoSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes','admin-custom-login')?></button>
-				<button type="button" onclick="return Custom_login_logo('logoReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default','admin-custom-login')?></button>
-		</div>
-	</div>
 </div>
 <?php
 if(isset($_POST['Action'])) {
-	$Action = sanitize_text_field($_POST['Action']);
+	$Action = (isset($_POST["Action"]) ? sanitize_text_field($_POST["Action"]) : "");
 	if( ! wp_verify_nonce( $_POST['nonce_ajax'], 'weblizar_admin_nonce' ) ) {
 		die('Not authorized');
 	}
 	else {
 		//Save Page Values
 		if($Action == "logoSave") {
-			$logo_image 	= sanitize_text_field($_POST['logo_image']);
-			$logo_show 		= sanitize_text_field($_POST['logo_show']);
-			$logo_width 	= sanitize_text_field($_POST['logo_width']);
-			$logo_height 	= sanitize_text_field($_POST['logo_height']);
-			$logo_url 		= sanitize_url($_POST['logo_url']);
+			$logo_image 	= (isset($_POST["logo_image"]) ? sanitize_text_field($_POST["logo_image"]) : "");
+			$logo_show 		= (isset($_POST["logo_show"]) ? sanitize_text_field($_POST["logo_show"]) : "");
+			$logo_width 	= (isset($_POST["logo_width"]) ? sanitize_text_field($_POST["logo_width"]) : "");
+			$logo_height 	= (isset($_POST["logo_height"]) ? sanitize_text_field($_POST["logo_height"]) : "");
+			$logo_url 		= (isset($_POST["logo_url"]) ? sanitize_url($_POST["logo_url"]) : "");
 			$logo_url_title = sanitize_title($_POST['logo_url_title']);
 
 			// save values in option table

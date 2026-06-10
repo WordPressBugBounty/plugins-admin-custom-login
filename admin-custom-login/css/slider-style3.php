@@ -1,7 +1,7 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit;
-$top_page = unserialize(get_option('Admin_custome_login_top'));
+$top_page = maybe_unserialize(get_option('Admin_custome_login_top'));
 $top_slideshow_no = $top_page['top_slideshow_no'];
-$Slidshow_image = unserialize(get_option('Admin_custome_login_Slidshow'));
+$Slidshow_image = maybe_unserialize(get_option('Admin_custome_login_Slidshow'));
 	$Slidshow_image_1=$Slidshow_image['Slidshow_image_1'];
 	$Slidshow_image_2=$Slidshow_image['Slidshow_image_2'];
 	$Slidshow_image_3=$Slidshow_image['Slidshow_image_3'];

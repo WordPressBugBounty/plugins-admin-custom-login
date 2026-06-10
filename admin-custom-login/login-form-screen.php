@@ -6,11 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 function acl_er_login_logo() {
 	// Get all options from db
 	$er_options          = get_option( 'plugin_erident_settings' );
-	$top_page            = unserialize( get_option( 'Admin_custome_login_top' ) );
-	$login_page          = unserialize( get_option( 'Admin_custome_login_login' ) );
-	$text_and_color_page = unserialize( get_option( 'Admin_custome_login_text' ) );
-	$logo_page           = unserialize( get_option( 'Admin_custome_login_logo' ) );
-	$Social_page         = unserialize( get_option( 'Admin_custome_login_Social' ) );
+	$top_page            = maybe_unserialize(get_option( 'Admin_custome_login_top' ));
+	$login_page          = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
+	$text_and_color_page = maybe_unserialize(get_option( 'Admin_custome_login_text' ));
+	$logo_page           = maybe_unserialize(get_option( 'Admin_custome_login_logo' ));
+	$Social_page         = maybe_unserialize(get_option( 'Admin_custome_login_Social' ));
 
 	if ( isset( $login_page['login_custom_css'] ) ) {
 		$login_custom_css = $login_page['login_custom_css'];
@@ -129,7 +129,7 @@ function acl_er_login_logo() {
 	/* Logo URL */
 	function my_login_logo_url() {
 		if ( get_option( 'Admin_custome_login_logo' ) ) {
-			$logo_page = unserialize( get_option( 'Admin_custome_login_logo' ) );
+			$logo_page = maybe_unserialize(get_option( 'Admin_custome_login_logo' ));
 			return esc_url( $logo_page['logo_url'] );
 			// make get option varibles and use
 		} else {
@@ -141,7 +141,7 @@ function acl_er_login_logo() {
 	/* Logo URL Title*/
 	function my_login_logo_url_title() {
 		if ( get_option( 'Admin_custome_login_logo' ) ) {
-			$logo_page = unserialize( get_option( 'Admin_custome_login_logo' ) );
+			$logo_page = maybe_unserialize(get_option( 'Admin_custome_login_logo' ));
 			return esc_html( $logo_page['logo_url_title'] );
 			// make get option varibles and use
 		} else {
@@ -155,7 +155,7 @@ function acl_er_login_logo() {
 	require 'includes/login-inline-css.php';
 	/** Message Above Login Form ***/
 	function acl_login_message( $message ) {
-		$login_page = unserialize( get_option( 'Admin_custome_login_login' ) );
+		$login_page = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
 		if ( ! empty( $login_page['log_form_above_msg'] ) ) {
 			$log_form_above_msg = $login_page['log_form_above_msg'];
 			return "<p class='login-msg-above'>" . wp_kses_post( stripslashes( $log_form_above_msg ) ) . '</p>';
@@ -168,7 +168,7 @@ function acl_er_login_logo() {
 	if ( $_SERVER['QUERY_STRING'] == 'action=lostpassword' ) {
 		add_filter( 'login_message', 'acl_reset_password_message' );
 		function acl_reset_password_message( $message ) {
-			$login_page = unserialize( get_option( 'Admin_custome_login_login' ) );
+			$login_page = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
 			if ( ! empty( $login_page['login_pass_reset_msg'] ) ) {
 				$login_pass_reset_msg = $login_page['login_pass_reset_msg'];
 			}
@@ -181,7 +181,7 @@ function acl_er_login_logo() {
 		}
 	}
 }
-$dashboard_page   = unserialize( get_option( 'Admin_custome_login_dashboard' ) );
+$dashboard_page   = maybe_unserialize(get_option( 'Admin_custome_login_dashboard' ));
 $dashboard_status = isset( $dashboard_page['dashboard_status'] ) ? $dashboard_page['dashboard_status'] : 'disable';
 if ( $dashboard_status == 'enable' ) {
 	add_action( 'login_enqueue_scripts', 'acl_er_login_logo' );

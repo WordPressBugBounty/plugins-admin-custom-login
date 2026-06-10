@@ -3,7 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-$login_page = unserialize( get_option( 'Admin_custome_login_login' ) );
+$login_page = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
 if ( isset( $login_page['login_redirect_force'] ) ) {
 	$login_redirect_force = $login_page['login_redirect_force'];
 } else {
@@ -15,7 +15,7 @@ if ( $login_redirect_force== 'yes' ) {
 		function () {
 			/** no non-authenticated users allowed */
 			if ( ! is_user_logged_in() ) {
-				$login_page  = unserialize( get_option( 'Admin_custome_login_login' ) );
+				$login_page  = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
 				$redirectURL = esc_url( $login_page['login_force_redirect_url'] );
 				wp_redirect( $redirectURL, 302 );
 				exit();
@@ -24,8 +24,8 @@ if ( $login_redirect_force== 'yes' ) {
 	);
 }
 
-$g_page         = unserialize( get_option( 'Admin_custome_login_gcaptcha' ) );
-$dashboard_page = unserialize( get_option( 'Admin_custome_login_dashboard' ) );
+$g_page         = maybe_unserialize(get_option( 'Admin_custome_login_gcaptcha' ));
+$dashboard_page = maybe_unserialize(get_option( 'Admin_custome_login_dashboard' ));
 if ( isset( $g_page['login_enable_gcaptcha'] ) ) {
 	$login_enable_gcaptcha = $g_page['login_enable_gcaptcha'];
 	$dashboard_status      = $dashboard_page['dashboard_status'];
@@ -47,7 +47,7 @@ function ACL_login_redirect( $redirect_to, $request, $user ) {
 	// is there a user to check?
 	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
 		/** get and load custom redirect option after user login */
-		$login_page          = unserialize( get_option( 'Admin_custome_login_login' ) );
+		$login_page          = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
 		$login_redirect_user = isset( $login_page['login_redirect_user'] ) ? $login_page['login_redirect_user'] : '';
 		/** check for admins */
 		if ( in_array( 'administrator', $user->roles ) ) {
@@ -161,8 +161,8 @@ function acl_admin_custom_login_js() {
 
 function acl_advanced_login_form_plugin() {
 	 wp_enqueue_script( 'jquery' );
-	$dashboard_page = unserialize( get_option( 'Admin_custome_login_dashboard' ) );
-	$top_page       = unserialize( get_option( 'Admin_custome_login_top' ) );
+	$dashboard_page = maybe_unserialize(get_option( 'Admin_custome_login_dashboard' ));
+	$top_page       = maybe_unserialize(get_option( 'Admin_custome_login_top' ));
 	if ( $top_page['top_bg_type'] == 'slider-background' && $dashboard_page['dashboard_status'] == 'enable' ) {
 		wp_register_script( 'modernizr', WEBLIZAR_NALF_PLUGIN_URL . 'js/modernizr.custom.86080.js', array(), WEBLIZAR_ACL_VERSION );
 		wp_enqueue_script( 'modernizr' );
@@ -193,7 +193,7 @@ function WACL_login_button_text() {
  */
 function WACL_loginbutton_gettext( $translation, $text ) {
 	if ( get_option( 'Admin_custome_login_login' ) ) {
-		$label_login_button = unserialize( get_option( 'Admin_custome_login_login' ) );
+		$label_login_button = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
 		if ( isset( $label_login_button['label_loginButton'] ) ) {
 			$label_text = $label_login_button['label_loginButton'];
 		} else {
@@ -215,17 +215,17 @@ function WACL_loginbutton_gettext( $translation, $text ) {
  * @return void
  */
 function acl_footer_func() {
-	$text_and_color_page  = unserialize( get_option( 'Admin_custome_login_text' ) );
+	$text_and_color_page  = maybe_unserialize(get_option( 'Admin_custome_login_text' ));
 	$user_input_icon      = $text_and_color_page['user_input_icon'];
 	$password_input_icon  = $text_and_color_page['password_input_icon'];
 	$enable_inputbox_icon = $text_and_color_page['enable_inputbox_icon'];
 	$heading_font_color   = $text_and_color_page['heading_font_color'];
 	$heading_font_size    = $text_and_color_page['heading_font_size'];
 	$input_font_size      = $text_and_color_page['input_font_size'];
-	$top_page             = unserialize( get_option( 'Admin_custome_login_top' ) );
-	$Social_page          = unserialize( get_option( 'Admin_custome_login_Social' ) );
+	$top_page             = maybe_unserialize(get_option( 'Admin_custome_login_top' ));
+	$Social_page          = maybe_unserialize(get_option( 'Admin_custome_login_Social' ));
 
-	$login_page = unserialize( get_option( 'Admin_custome_login_login' ) );
+	$login_page = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
 	if ( isset( $login_page['user_cust_lbl'] ) ) {
 		$user_cust_lbl = $login_page['user_cust_lbl'];
 	} else {
@@ -302,7 +302,7 @@ function acl_footer_func() {
 		<?php } ?>
 
 		<?php
-			$g_page = unserialize( get_option( 'Admin_custome_login_gcaptcha' ) );
+			$g_page = maybe_unserialize(get_option( 'Admin_custome_login_gcaptcha' ));
 		if ( ! empty( $g_page ) ) {
 			$site_key   = ( array_key_exists( 'site_key', $g_page ) ) ? $g_page['site_key'] : '';
 			$secret_key = ( array_key_exists( 'secret_key', $g_page ) ) ? $g_page['secret_key'] : '';
@@ -401,7 +401,7 @@ function acl_footer_func() {
 			jQuery( "#backtoblog" ).append( <?php echo wp_json_encode( $social_outer_html ); ?> );
 		<?php } ?>
 <?php
-			$login_page = unserialize( get_option( 'Admin_custome_login_login' ) );
+			$login_page = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
 		if ( isset( $login_page['tagline_msg'] ) ) {
 			$tagline_msg      = $login_page['tagline_msg'];
 			$edit_tagline_msg = stripslashes( $tagline_msg );
@@ -419,7 +419,7 @@ function acl_footer_func() {
 
 	wp_add_inline_script( 'weblizar-acl-footer', $js );
 }
-$dashboard_page = unserialize( get_option( 'Admin_custome_login_dashboard' ) );
+$dashboard_page = maybe_unserialize(get_option( 'Admin_custome_login_dashboard' ));
 if ( isset( $dashboard_page['dashboard_status'] ) == 'enable' ) {
 	add_action( 'login_head', 'acl_footer_func' );
 }
@@ -430,7 +430,7 @@ function acl_admin_custom_login_content() {
 // Guidline update
 function background_enqueue_script() {
 	if ( strpos( $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'admin_custom_login' ) == true ) {
-		$top_page = unserialize( get_option( 'Admin_custome_login_top' ) );
+		$top_page = maybe_unserialize(get_option( 'Admin_custome_login_top' ));
 		wp_register_script( 'wl-acl-background', WEBLIZAR_NALF_PLUGIN_URL . 'js/background.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION, true );
 		wp_enqueue_script( 'wl-acl-background' );
 		if ( ! empty( $top_page ) ) {
@@ -454,7 +454,7 @@ add_action( 'admin_enqueue_scripts', 'background_enqueue_script' );
 
 function text_and_color_enqueue() {
 	if ( strpos( $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'admin_custom_login' ) == true ) {
-		$text_and_color_page = unserialize( get_option( 'Admin_custome_login_text' ) );
+		$text_and_color_page = maybe_unserialize(get_option( 'Admin_custome_login_text' ));
 		wp_register_script( 'wl-acl-text-and-color', WEBLIZAR_NALF_PLUGIN_URL . 'js/textandcolor.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION, true );
 		wp_enqueue_script( 'wl-acl-text-and-color' );
 		if ( ! empty( $text_and_color_page ) ) {
@@ -479,9 +479,9 @@ add_action( 'admin_enqueue_scripts', 'text_and_color_enqueue' );
 
 function login_form_enqueue_script() {
 	if ( strpos( $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'admin_custom_login' ) == true ) {
-		$login_page          = unserialize( get_option( 'Admin_custome_login_login' ) );
-		$text_and_color_page = unserialize( get_option( 'Admin_custome_login_text' ) );
-		$Social_page         = unserialize( get_option( 'Admin_custome_login_Social' ) );
+		$login_page          = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
+		$text_and_color_page = maybe_unserialize(get_option( 'Admin_custome_login_text' ));
+		$Social_page         = maybe_unserialize(get_option( 'Admin_custome_login_Social' ));
 		wp_register_script( 'wl-acl-login-form', WEBLIZAR_NALF_PLUGIN_URL . 'js/inlinejs/loginform.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION, true );
 		wp_enqueue_script( 'wl-acl-login-form' );
 
@@ -523,19 +523,24 @@ add_action( 'admin_enqueue_scripts', 'page_settings_enqueue_script' );
 
 function page_settings_enqueue_script() {
 	if ( strpos( $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'admin_custom_login' ) == true ) {
-		$logo_page = unserialize( get_option( 'Admin_custome_login_logo' ) );
+		$logo_page = maybe_unserialize(get_option( 'Admin_custome_login_logo' ));
+		$g_page    = maybe_unserialize(get_option( 'Admin_custome_login_gcaptcha' ));
+		
+		$logo_width  = isset($logo_page['logo_width']) ? $logo_page['logo_width'] : '200';
+		$logo_height = isset($logo_page['logo_height']) ? $logo_page['logo_height'] : '60';
+		$login_v_gcaptcha = isset($g_page['login_v_gcaptcha']) ? $g_page['login_v_gcaptcha'] : 'v2';
+
 		wp_register_script( 'wl-acl-page-settings', WEBLIZAR_NALF_PLUGIN_URL . 'js/inlinejs/pagesettings.js', array( 'jquery' ), WEBLIZAR_ACL_VERSION, true );
 		wp_enqueue_script( 'wl-acl-page-settings' );
-		if ( ! empty( $logo_page ) ) {
-			wp_localize_script(
-				'wl-acl-page-settings',
-				'page_settings_object',
-				array(
-					'logo_width'  => $logo_page['logo_width'],
-					'logo_height' => $logo_page['logo_height'],
-				)
-			);
-		}
+		wp_localize_script(
+			'wl-acl-page-settings',
+			'page_settings_object',
+			array(
+				'logo_width'       => $logo_width,
+				'logo_height'      => $logo_height,
+				'login_v_gcaptcha' => $login_v_gcaptcha,
+			)
+		);
 	}
 }
 /**** Process a settings export that generates a .json file of the shop settings ***/
@@ -552,11 +557,11 @@ function acl_export_settings() {
 	}
 
 	/****  Get value of Dashboard page */
-	$dashboard_page   = unserialize( get_option( 'Admin_custome_login_dashboard' ) );
+	$dashboard_page   = maybe_unserialize(get_option( 'Admin_custome_login_dashboard' ));
 	$dashboard_status = $dashboard_page['dashboard_status'];
 
 	/****  Get value of Top page */
-	$top_page       = unserialize( get_option( 'Admin_custome_login_top' ) );
+	$top_page       = maybe_unserialize(get_option( 'Admin_custome_login_top' ));
 	$top_bg_type    = $top_page['top_bg_type'];
 	$top_color      = $top_page['top_color'];
 	$top_image      = $top_page['top_image'];
@@ -569,7 +574,7 @@ function acl_export_settings() {
 	$top_bg_slider_animation = $top_page['top_bg_slider_animation'];
 
 	/**** Get value of Login page */
-	$login_page                     = unserialize( get_option( 'Admin_custome_login_login' ) );
+	$login_page                     = maybe_unserialize(get_option( 'Admin_custome_login_login' ));
 	$login_form_position            = $login_page['login_form_position'];
 	$login_form_left                = $login_page['login_form_left'];
 	$login_form_float               = $login_page['login_form_float'];
@@ -607,7 +612,7 @@ function acl_export_settings() {
 	$label_loginButton              = $login_page['label_loginButton'];
 
 	/**** Get value of Text and Color page */
-	$text_and_color_page      = unserialize( get_option( 'Admin_custome_login_text' ) );
+	$text_and_color_page      = maybe_unserialize(get_option( 'Admin_custome_login_text' ));
 	$heading_font_color       = $text_and_color_page['heading_font_color'];
 	$input_font_color         = $text_and_color_page['input_font_color'];
 	$link_color               = $text_and_color_page['link_color'];
@@ -631,7 +636,7 @@ function acl_export_settings() {
 	$password_input_icon      = $text_and_color_page['password_input_icon'];
 
 	/**** Get value of Logo page */
-	$logo_page      = unserialize( get_option( 'Admin_custome_login_logo' ) );
+	$logo_page      = maybe_unserialize(get_option( 'Admin_custome_login_logo' ));
 	$logo_show      = isset( $logo_page['logo_show'] ) ? $logo_page['logo_show'] : 'yes';
 	$logo_image     = $logo_page['logo_image'];
 	$logo_width     = $logo_page['logo_width'];
@@ -640,7 +645,7 @@ function acl_export_settings() {
 	$logo_url_title = $logo_page['logo_url_title'];
 
 	/**** Get value of Slidshow image */
-	$Slidshow_image            = unserialize( get_option( 'Admin_custome_login_Slidshow' ) );
+	$Slidshow_image            = maybe_unserialize(get_option( 'Admin_custome_login_Slidshow' ));
 	$Slidshow_image_1          = $Slidshow_image['Slidshow_image_1'];
 	$Slidshow_image_2          = $Slidshow_image['Slidshow_image_2'];
 	$Slidshow_image_3          = $Slidshow_image['Slidshow_image_3'];
@@ -653,7 +658,7 @@ function acl_export_settings() {
 	$Slidshow_image_label_4    = $Slidshow_image['Slidshow_image_label_4'];
 	$Slidshow_image_label_5    = $Slidshow_image['Slidshow_image_label_5'];
 	$Slidshow_image_label_6    = $Slidshow_image['Slidshow_image_label_6'];
-	$Social_page               = unserialize( get_option( 'Admin_custome_login_Social' ) );
+	$Social_page               = maybe_unserialize(get_option( 'Admin_custome_login_Social' ));
 	$enable_social_icon        = $Social_page['enable_social_icon'];
 	$social_icon_size          = $Social_page['social_icon_size'];
 	$social_icon_layout        = $Social_page['social_icon_layout'];
@@ -674,7 +679,7 @@ function acl_export_settings() {
 	$social_instagram_link     = $Social_page['social_instagram_link'];
 	$social_telegram_link      = $Social_page['social_telegram_link'];
 	$social_whatsapp_link      = $Social_page['social_whatsapp_link'];
-	$g_page                    = unserialize( get_option( 'Admin_custome_login_gcaptcha' ) );
+	$g_page                    = maybe_unserialize(get_option( 'Admin_custome_login_gcaptcha' ));
 	$site_key                  = ( array_key_exists( 'site_key', $g_page ) ) ? $g_page['site_key'] : '';
 	$secret_key                = ( array_key_exists( 'secret_key', $g_page ) ) ? $g_page['secret_key'] : '';
 	$login_enable_gcaptcha     = ( array_key_exists( 'login_enable_gcaptcha', $g_page ) ) ? $g_page['login_enable_gcaptcha'] : 'light';

@@ -19,14 +19,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Headline Font Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td id="td-headline-font-color">
 						<input id="headline-font-color" name="headline-font-color" type="text" value="<?php echo esc_attr($heading_font_color); ?>" class="my-color-field" data-default-color="#ffffff" />
 					</td>
@@ -35,14 +35,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Input Font Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td id="td-input-font-color">
 						<input id="input-font-color" name="input-font-color" type="text" value="<?php echo esc_attr($input_font_color); ?>" class="my-color-field" data-default-color="#ffffff"/>
 					</td>
@@ -51,14 +51,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Link Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td id="td-link-font-color">
 						<input id="link-color" name="link-color" type="text" value="<?php echo esc_attr($link_color); ?>" class="my-color-field" data-default-color="#ffffff" />
 					</td>
@@ -67,14 +67,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Button Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td id="td-button-font-color">
 						<input id="button-color" name="button-color" type="text" value="<?php echo esc_attr($button_color); ?>" class="my-color-field" data-default-color="#ffffff" />
 					</td>
@@ -83,14 +83,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
     <!-- login button font color -->
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Login Button font Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td id="td-login-button-font-color">
 						<input id="login-button-text-color" name="login-button-font-color" type="text" value="<?php echo esc_attr($login_button_font_color); ?>" class="my-color-field" data-default-color="#ffffff" />
 					</td>
@@ -99,16 +99,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Headline Font size', 'admin-custom-login')?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
-						<div id="button-size-slider" class="size-slider" style="width: 25%;display:inline-block"></div>
+						<div id="button-size-slider" class="size-slider display-inline-block-25"></div>
 						<input type="text" class="slider-text" id="headline-size-text-box" name="headline-size-text-box"  readonly="readonly">
 						<span class="slider-text-span"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
@@ -117,16 +117,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Input Font Size', 'admin-custom-login')?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
-						<div id="button-size-slider2" class="size-slider" style="width: 25%;display:inline-block"></div>
+						<div id="button-size-slider2" class="size-slider display-inline-block-25"></div>
 						<input type="text" class="slider-text" id="input-size-text-box" name="input-size-text-box"  readonly="readonly">
 						<span class="slider-text-span"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
@@ -135,16 +135,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Link Font Size', 'admin-custom-login')?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
-						<div id="button-size-slider3" class="size-slider" style="width: 25%;display:inline-block"></div>
+						<div id="button-size-slider3" class="size-slider display-inline-block-25"></div>
 						<input type="text" class="slider-text" id="link-size-text-box" name="link-size-text-box"  readonly="readonly">
 						<span class="slider-text-span"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
@@ -153,16 +153,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Button Font Size', 'admin-custom-login')?><p class="font-italic"> (Use your left and right arrow keys to select the exact number)</p></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
-						<div id="button-size-slider7" class="size-slider" style="width: 25%;display:inline-block"></div>
+						<div id="button-size-slider7" class="size-slider display-inline-block-25"></div>
 						<input type="text" class="slider-text" id="button-size-text-box" name="button-size-text-box"  readonly="readonly">
 						<span class="slider-text-span"><?php esc_html_e('Px', 'admin-custom-login')?></span>
 					</td>
@@ -171,14 +171,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-<div class="panel panel-primary panel-default content-panel">
+<div class="panel panel-primary panel-default content-panel col-md-6">
 	<div class="panel-body">
 		<table class="form-table">
 			<tr>
 				<th scope="row" ><?php esc_html_e('Show Remember Me Field', 'admin-custom-login')?></th>
 				<td></td>
 			</tr>
-			<tr class="radio-span" style="border-bottom:none;">
+			<tr class="radio-span border-bottom-none">
 				<td>
 					<span>
 						<input type="radio" name="show_remember_me_field" value="yes" id="show_remember_me_field1" <?php if($show_remember_me_field=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="show_remember_me_field1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
@@ -191,14 +191,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</table>
 	</div>
 </div>
-<div class="panel panel-primary panel-default content-panel">
+<div class="panel panel-primary panel-default content-panel col-md-6">
 	<div class="panel-body">
 		<table class="form-table">
 			<tr>
 				<th scope="row" ><?php esc_html_e('Show Back To Site Link ', 'admin-custom-login')?></th>
 				<td></td>
 			</tr>
-			<tr class="radio-span" style="border-bottom:none;">
+			<tr class="radio-span border-bottom-none">
 				<td>
 					<span>
 						<input type="radio" name="show_back_to_site_link" value="yes" id="show_back_to_site_link1" <?php if($show_back_to_site_link=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="show_back_to_site_link1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
@@ -211,14 +211,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</table>
 	</div>
 </div>
-<div class="panel panel-primary panel-default content-panel">
+<div class="panel panel-primary panel-default content-panel col-md-6">
 	<div class="panel-body">
 		<table class="form-table">
 			<tr>
 				<th scope="row" ><?php esc_html_e('Show Copyright link text', 'admin-custom-login')?></th>
 				<td></td>
 			</tr>
-			<tr class="radio-span" style="border-bottom:none;">
+			<tr class="radio-span border-bottom-none">
 				<td>
 					<span>
 						<input type="radio" name="show_copyright_link_text" value="yes" id="show_copyright_link_text1" <?php if($show_copyright_link_text=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="show_copyright_link_text1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
@@ -231,14 +231,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</table>
 	</div>
 </div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Enable Link shadow?', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr class="radio-span" style="border-bottom:none;">
+				<tr class="radio-span border-bottom-none">
 					<td>
 						<span>
 							<input type="radio" name="enable_Link_shadow" value="yes" id="enable_Link_shadow1" <?php if($enable_link_shadow=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_Link_shadow1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
@@ -252,14 +252,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Link Shadow Color', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<input id="link-shadow-color" name="link-shadow-color" type="text" value="<?php echo esc_attr($link_shadow_color); ?>" class="my-color-field" data-default-color="#ffffff"/>
 					</td>
@@ -268,7 +268,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -276,7 +276,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<td></td>
 				</tr>
 				<?php $RPP_Font_Style=""; ?>
-				<tr class="" style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<select id="headline_font_style" class="standard-dropdown" name="headline_font_style">
 							<optgroup label="Google Fonts">
@@ -313,7 +313,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -321,7 +321,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<td></td>
 				</tr>
 				<?php $RPP_Font_Style=""; ?>
-				<tr class="" style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<select id="input_font_style" class="standard-dropdown" name="input_font_style"  >
 							<optgroup label="Google Fonts">
@@ -355,7 +355,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -363,7 +363,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<td></td>
 				</tr>
 				<?php $RPP_Font_Style=""; ?>
-				<tr class="" style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<select id="link_font_style" class="standard-dropdown" name="link_font_style">	
 							<optgroup label="Google Fonts">
@@ -399,7 +399,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	</div>
 	
 	
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -407,7 +407,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<td></td>
 				</tr>
 				<?php $RPP_Font_Style=""; ?>
-				<tr class="" style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<select id="button_font_style" class="standard-dropdown" name="button_font_style"  >
 							<optgroup label="Google Fonts">
@@ -442,14 +442,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Enable Input Box Icon?', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr class="radio-span" style="border-bottom:none;">
+				<tr class="radio-span border-bottom-none">
 					<td>
 						<span>
 							<input type="radio" name="enable_inputbox_icon" value="yes" id="enable_inputbox_icon1" <?php if($enable_inputbox_icon=="yes")echo esc_attr("checked"); ?> />&nbsp;<label for="enable_inputbox_icon1"><?php esc_html_e('Yes', 'admin-custom-login')?></label><br>
@@ -462,14 +462,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>		
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Icon For user Input Box', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr class="" style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<!-- Modal -->
 						<div class="col-md-9">
@@ -483,14 +483,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Icon For Password Input Box', 'admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr class="" style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<!-- Modal -->
 						<div class="col-md-9">
@@ -505,9 +505,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<button data-dialog3="somedialog3" class="dialog-button3" style="display:none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?>
+	<div class="col-md-12 save-card-block save-card-block-custom">
+		<div class="save-button-block save-button-block-custom">
+			<button type="button" onclick="return Custom_login_text('textandcolorSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes', 'admin-custom-login')?></button>
+			<button type="button" onclick="return Custom_login_text('textandcolorReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default', 'admin-custom-login')?></button>
+		</div>
+	</div>
+
+	<button data-dialog3="somedialog3" class="dialog-button3 d-none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?>
 </button>
-	<div id="somedialog3" class="dialog" style="position: fixed; z-index: 9999;">
+	<div id="somedialog3" class="dialog dialog-fixed-z">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
 			<div class="morph-shape" data-morph-open="M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33" data-morph-close="M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33">
@@ -521,8 +528,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<button data-dialog9="somedialog9" class="dialog-button9" style="display:none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
-	<div id="somedialog9" class="dialog" style="position: fixed; z-index: 9999;">
+	<button data-dialog9="somedialog9" class="dialog-button9 d-none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
+	<div id="somedialog9" class="dialog dialog-fixed-z">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
 			<div class="morph-shape" data-morph-open="M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33" data-morph-close="M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33">
@@ -535,44 +542,37 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</div>
 		</div>
 	</div>
-	
-	<div class="panel panel-primary save-button-block" >
-		<div class="panel-body">
-				<button type="button" onclick="return Custom_login_text('textandcolorSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes', 'admin-custom-login')?></button>
-				<button type="button" onclick="return Custom_login_text('textandcolorReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default', 'admin-custom-login')?></button>
-		</div>
-	</div>
 </div>
 <?php
 if(isset($_POST['Action'])) {
-	$Action = sanitize_text_field($_POST['Action']);
+	$Action = (isset($_POST["Action"]) ? sanitize_text_field($_POST["Action"]) : "");
 	if( ! wp_verify_nonce( $_POST['nonce_ajax'], 'weblizar_admin_nonce' ) ) {
 		die('Not authorized');
 	}
 	else {
 		//Save
 		if($Action == "textandcolorSave"){
-			$heading_font_color       = sanitize_hex_color($_POST['heading_font_color']);
-			$input_font_color         = sanitize_hex_color($_POST['input_font_color']);
-			$link_color               = sanitize_hex_color($_POST['link_color']);
-			$button_color             = sanitize_hex_color($_POST['button_color']);
-			$login_button_font_color  = sanitize_hex_color($_POST['login_button_font_color']);
-			$heading_font_size        = sanitize_text_field($_POST['heading_font_size']);
-			$input_font_size          = sanitize_text_field($_POST['input_font_size']);
-			$link_size                = sanitize_text_field($_POST['link_size']);
-			$button_font_size         = sanitize_text_field($_POST['button_font_size']);
-			$enable_link_shadow       = sanitize_text_field($_POST['enable_link_shadow']);
-			$show_remember_me_field   = sanitize_text_field($_POST['show_remember_me_field']);
-			$show_back_to_site_link   = sanitize_text_field($_POST['show_back_to_site_link']);
-			$show_copyright_link_text = sanitize_text_field($_POST['show_copyright_link_text']);
-			$link_shadow_color        = sanitize_hex_color($_POST['link_shadow_color']);
-			$heading_font_style       = sanitize_text_field($_POST['heading_font_style']);
-			$input_font_style         = sanitize_text_field($_POST['input_font_style']);
-			$link_font_style          = sanitize_text_field($_POST['link_font_style']);
-			$button_font_style        = sanitize_text_field($_POST['button_font_style']);
-			$enable_inputbox_icon     = sanitize_text_field($_POST['enable_inputbox_icon']);
-			$user_input_icon          = sanitize_text_field( $_POST['user_input_icon']);
-			$password_input_icon      = sanitize_text_field( $_POST['password_input_icon']);
+			$heading_font_color       = (isset($_POST["heading_font_color"]) ? sanitize_hex_color($_POST["heading_font_color"]) : "");
+			$input_font_color         = (isset($_POST["input_font_color"]) ? sanitize_hex_color($_POST["input_font_color"]) : "");
+			$link_color               = (isset($_POST["link_color"]) ? sanitize_hex_color($_POST["link_color"]) : "");
+			$button_color             = (isset($_POST["button_color"]) ? sanitize_hex_color($_POST["button_color"]) : "");
+			$login_button_font_color  = (isset($_POST["login_button_font_color"]) ? sanitize_hex_color($_POST["login_button_font_color"]) : "");
+			$heading_font_size        = (isset($_POST["heading_font_size"]) ? sanitize_text_field($_POST["heading_font_size"]) : "");
+			$input_font_size          = (isset($_POST["input_font_size"]) ? sanitize_text_field($_POST["input_font_size"]) : "");
+			$link_size                = (isset($_POST["link_size"]) ? sanitize_text_field($_POST["link_size"]) : "");
+			$button_font_size         = (isset($_POST["button_font_size"]) ? sanitize_text_field($_POST["button_font_size"]) : "");
+			$enable_link_shadow       = (isset($_POST["enable_link_shadow"]) ? sanitize_text_field($_POST["enable_link_shadow"]) : "");
+			$show_remember_me_field   = (isset($_POST["show_remember_me_field"]) ? sanitize_text_field($_POST["show_remember_me_field"]) : "");
+			$show_back_to_site_link   = (isset($_POST["show_back_to_site_link"]) ? sanitize_text_field($_POST["show_back_to_site_link"]) : "");
+			$show_copyright_link_text = (isset($_POST["show_copyright_link_text"]) ? sanitize_text_field($_POST["show_copyright_link_text"]) : "");
+			$link_shadow_color        = (isset($_POST["link_shadow_color"]) ? sanitize_hex_color($_POST["link_shadow_color"]) : "");
+			$heading_font_style       = (isset($_POST["heading_font_style"]) ? sanitize_text_field($_POST["heading_font_style"]) : "");
+			$input_font_style         = (isset($_POST["input_font_style"]) ? sanitize_text_field($_POST["input_font_style"]) : "");
+			$link_font_style          = (isset($_POST["link_font_style"]) ? sanitize_text_field($_POST["link_font_style"]) : "");
+			$button_font_style        = (isset($_POST["button_font_style"]) ? sanitize_text_field($_POST["button_font_style"]) : "");
+			$enable_inputbox_icon     = (isset($_POST["enable_inputbox_icon"]) ? sanitize_text_field($_POST["enable_inputbox_icon"]) : "");
+			$user_input_icon          = (isset($_POST["user_input_icon"]) ? sanitize_text_field($_POST["user_input_icon"]) : "");
+			$password_input_icon      = (isset($_POST["password_input_icon"]) ? sanitize_text_field($_POST["password_input_icon"]) : "");
 
 			
 			// Save Values in Option Table

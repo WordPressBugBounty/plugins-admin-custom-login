@@ -1,5 +1,5 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit;
-$Social_page               = unserialize(get_option('Admin_custome_login_Social'));
+$Social_page               = maybe_unserialize(get_option('Admin_custome_login_Social'));
 $social_icon_size          = $Social_page['social_icon_size'];
 $social_icon_layout        = $Social_page['social_icon_layout'];
 $social_icon_color         = $Social_page['social_icon_color'];
@@ -16,7 +16,7 @@ $social_flickr_link        = $Social_page['social_flickr_link'];
 $social_tumblr_link        = $Social_page['social_tumblr_link'];
 $social_skype_link         = $Social_page['social_skype_link'];
 $social_instagram_link     = $Social_page['social_instagram_link'];
-$login_page                = unserialize(get_option('Admin_custome_login_login'));
+$login_page                = maybe_unserialize(get_option('Admin_custome_login_login'));
 if(isset($login_page['login_form_float'])){
 	$login_form_float = $login_page['login_form_float'];
 }else{

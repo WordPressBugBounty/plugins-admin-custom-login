@@ -20,14 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Enable Social Icons','admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr class="radio-span" style="border-bottom:none;">
+				<tr class="radio-span border-bottom-none">
 					<td>
 						<select id="enable_social_icon" class="standard-dropdown" name="enable_social_icon">
 							<option value="no-icon" ><?php esc_html_e('No Icon','admin-custom-login')?></option>
@@ -40,14 +40,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Social Media Icon Size','admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr class="radio-span" style="border-bottom:none;">
+				<tr class="radio-span border-bottom-none">
 					<td>
 						<span>
 							<input type="radio" name="social_size" value="small" id="social_size1" <?php if($social_icon_size=="small")echo esc_attr("checked"); ?> />&nbsp;<label for="social_size1"><?php esc_html_e('Small','admin-custom-login')?></label><br>
@@ -63,14 +63,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Social Media Icon Layout','admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr class="radio-span" style="border-bottom:none;">
+				<tr class="radio-span border-bottom-none">
 					<td>
 						<span>
 							<input type="radio" name="social_layout" value="rectangle" id="social_layout1" <?php if($social_icon_layout=="rectangle")echo esc_attr("checked"); ?>  />&nbsp;<label for="social_layout1"><?php esc_html_e('Rectangle','admin-custom-login')?></label><br>
@@ -83,14 +83,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Social Media Icon Color','admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<input id="social-icon-color" name="background-color" type="text" value="<?php echo esc_attr($social_icon_color); ?>" class="my-color-field" data-default-color="#ffffff"/>
 					</td>
@@ -98,14 +98,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Social Media Icon Color On Hover','admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<input id="social-icon-color-onhover" name="background-color" type="text" value="<?php echo esc_attr($social_icon_color_onhover); ?>" class="my-color-field" data-default-color="#ffffff"/>
 					</td>
@@ -113,14 +113,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Social Media Icon Background Color','admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<input id="social-bg-color" name="background-color" type="text" value="<?php echo esc_attr($social_icon_bg); ?>" class="my-color-field" data-default-color="#ffffff" />
 					</td>
@@ -128,14 +128,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
 					<th scope="row" ><?php esc_html_e('Social Media Background Color On Hover','admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr  style="border-bottom:none;">
+				<tr class="border-bottom-none">
 					<td>
 						<input id="social-bg-color-onhover" name="background-color" type="text" value="<?php echo esc_attr($social_icon_bg_onhover); ?>" class="my-color-field" data-default-color="#ffffff"/>
 					</td>
@@ -143,7 +143,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-4">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -151,10 +151,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<td></td>
 				</tr>
 				
-				<tr class="radio-span" style="border-bottom:none;">
+				<tr class="radio-span border-bottom-none">
 					<td>
 						<?php 
-		                    $Social_page = unserialize(get_option('Admin_custome_login_Social'));
+		                    $Social_page = maybe_unserialize(get_option('Admin_custome_login_Social'));
 		                    $social_link_new_window = @$Social_page['social_link_new_window'];
 		                    ?>
 						<span>
@@ -175,7 +175,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<th scope="row" ><?php esc_html_e('Social Profiles','admin-custom-login')?></th>
 					<td></td>
 				</tr>
-				<tr class="radio-span" style="border-bottom:none;">
+				<tr class="radio-span border-bottom-none">
 					<td>
 						<p class="rcsp_p_admin"><?php esc_html_e('Enter your social profiles complete url here','admin-custom-login')?></p>
 						<ul class="rcp_social_profile_admin">
@@ -197,8 +197,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</table>
 		</div>
 	</div>
-	<button data-dialog5="somedialog5" class="dialog-button5" style="display:none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
-	<div id="somedialog5" class="dialog" style="position: fixed; z-index: 9999;">
+
+	<div class="col-md-12 save-card-block save-card-block-custom">
+		<div class="save-button-block save-button-block-custom">
+			<button type="button" onclick="return Custom_login_social('socialSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes','admin-custom-login')?></button>
+			<button type="button" onclick="return Custom_login_social('socialReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default','admin-custom-login')?></button>
+		</div>
+	</div>
+	<button data-dialog5="somedialog5" class="dialog-button5 d-none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
+	<div id="somedialog5" class="dialog dialog-fixed-z">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
 			<div class="morph-shape" data-morph-open="M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33" data-morph-close="M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33">
@@ -211,8 +218,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</div>
 		</div>
 	</div>
-	<button data-dialog6="somedialog6" class="dialog-button6" style="display:none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
-	<div id="somedialog6" class="dialog" style="position: fixed; z-index: 9999;">
+	<button data-dialog6="somedialog6" class="dialog-button6 d-none"><?php esc_html_e('Open Dialog', 'admin-custom-login')?></button>
+	<div id="somedialog6" class="dialog dialog-fixed-z">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
 			<div class="morph-shape" data-morph-open="M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33" data-morph-close="M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33">
@@ -225,17 +232,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-primary save-button-block">
-		<div class="panel-body">
-				<button type="button" onclick="return Custom_login_social('socialSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes','admin-custom-login')?></button>
-				<button type="button" onclick="return Custom_login_social('socialReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default','admin-custom-login')?></button>
-		</div>
-	</div>
 </div>
 <!-- /row -->
 <?php
 if(isset($_POST['Action'])) {
-	$Action = sanitize_text_field($_POST['Action']);
+	$Action = (isset($_POST["Action"]) ? sanitize_text_field($_POST["Action"]) : "");
 	if( ! wp_verify_nonce( $_POST['nonce_ajax'], 'weblizar_admin_nonce' ) ) {
 		die('Not authorized');
 	}
@@ -243,29 +244,29 @@ if(isset($_POST['Action'])) {
 		//Save
 		if($Action == "socialSave") {
 
-			$enable_social_icon 	   = sanitize_text_field($_POST['enable_social_icon']);
-			$social_icon_size 		   = sanitize_text_field($_POST['social_icon_size']);
-			$social_icon_layout        = sanitize_text_field($_POST['social_icon_layout']);
-			$social_link_new_window    = sanitize_text_field($_POST['social_link_new_window']);
-			$social_icon_color 		   = sanitize_hex_color($_POST['social_icon_color']);
-			$social_icon_color_onhover = sanitize_hex_color($_POST['social_icon_color_onhover']);
-			$social_icon_bg 		   = sanitize_hex_color($_POST['social_icon_bg']);
-			$social_icon_bg_onhover    = sanitize_hex_color($_POST['social_icon_bg_onhover']);
+			$enable_social_icon 	   = (isset($_POST["enable_social_icon"]) ? sanitize_text_field($_POST["enable_social_icon"]) : "");
+			$social_icon_size 		   = (isset($_POST["social_icon_size"]) ? sanitize_text_field($_POST["social_icon_size"]) : "");
+			$social_icon_layout        = (isset($_POST["social_icon_layout"]) ? sanitize_text_field($_POST["social_icon_layout"]) : "");
+			$social_link_new_window    = (isset($_POST["social_link_new_window"]) ? sanitize_text_field($_POST["social_link_new_window"]) : "");
+			$social_icon_color 		   = (isset($_POST["social_icon_color"]) ? sanitize_hex_color($_POST["social_icon_color"]) : "");
+			$social_icon_color_onhover = (isset($_POST["social_icon_color_onhover"]) ? sanitize_hex_color($_POST["social_icon_color_onhover"]) : "");
+			$social_icon_bg 		   = (isset($_POST["social_icon_bg"]) ? sanitize_hex_color($_POST["social_icon_bg"]) : "");
+			$social_icon_bg_onhover    = (isset($_POST["social_icon_bg_onhover"]) ? sanitize_hex_color($_POST["social_icon_bg_onhover"]) : "");
 
 			
 			
-			$social_facebook_link 	 = sanitize_url($_POST['social_facebook_link']);
-			$social_twitter_link 	 = sanitize_url($_POST['social_twitter_link']);
-			$social_linkedin_link    = sanitize_url($_POST['social_linkedin_link']);
-			$social_pinterest_link   = sanitize_url($_POST['social_pinterest_link']);
-			$social_digg_link 		 = sanitize_url($_POST['social_digg_link']);
-			$social_youtube_link 	 = sanitize_url($_POST['social_youtube_link']);
-			$social_flickr_link 	 = sanitize_url($_POST['social_flickr_link']);
-			$social_tumblr_link 	 = sanitize_url($_POST['social_tumblr_link']);
-			$social_skype_link       = sanitize_url($_POST['social_skype_link']);
-			$social_instagram_link   = sanitize_url($_POST['social_instagram_link']);
-			$social_telegram_link    = sanitize_url($_POST['social_telegram_link']);
-			$social_whatsapp_link    = sanitize_url($_POST['social_whatsapp_link']);
+			$social_facebook_link 	 = (isset($_POST["social_facebook_link"]) ? sanitize_url($_POST["social_facebook_link"]) : "");
+			$social_twitter_link 	 = (isset($_POST["social_twitter_link"]) ? sanitize_url($_POST["social_twitter_link"]) : "");
+			$social_linkedin_link    = (isset($_POST["social_linkedin_link"]) ? sanitize_url($_POST["social_linkedin_link"]) : "");
+			$social_pinterest_link   = (isset($_POST["social_pinterest_link"]) ? sanitize_url($_POST["social_pinterest_link"]) : "");
+			$social_digg_link 		 = (isset($_POST["social_digg_link"]) ? sanitize_url($_POST["social_digg_link"]) : "");
+			$social_youtube_link 	 = (isset($_POST["social_youtube_link"]) ? sanitize_url($_POST["social_youtube_link"]) : "");
+			$social_flickr_link 	 = (isset($_POST["social_flickr_link"]) ? sanitize_url($_POST["social_flickr_link"]) : "");
+			$social_tumblr_link 	 = (isset($_POST["social_tumblr_link"]) ? sanitize_url($_POST["social_tumblr_link"]) : "");
+			$social_skype_link       = (isset($_POST["social_skype_link"]) ? sanitize_url($_POST["social_skype_link"]) : "");
+			$social_instagram_link   = (isset($_POST["social_instagram_link"]) ? sanitize_url($_POST["social_instagram_link"]) : "");
+			$social_telegram_link    = (isset($_POST["social_telegram_link"]) ? sanitize_url($_POST["social_telegram_link"]) : "");
+			$social_whatsapp_link    = (isset($_POST["social_whatsapp_link"]) ? sanitize_url($_POST["social_whatsapp_link"]) : "");
 			
 			$Social_page= serialize(array(
 				'enable_social_icon'        => $enable_social_icon,

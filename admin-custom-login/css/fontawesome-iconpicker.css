@@ -1,11 +1,4 @@
-/*!
- * Font Awesome Icon Picker
- * https://farbelous.github.io/fontawesome-iconpicker/
- *
- * @author Javi Aguilar, itsjavi.com
- * @license MIT License
- * @see https://github.com/farbelous/fontawesome-iconpicker/blob/master/LICENSE
- */
+
 .iconpicker-popover.popover {
   position: absolute;
   top: 0;
@@ -104,8 +97,7 @@
   margin-left: 10px;
 }
 .iconpicker-popover .popover-footer input[type=search].iconpicker-search {
-  /*width:auto;
-    float:left;*/
+  
   margin-bottom: 12px;
 }
 .iconpicker-popover.popover > .arrow,
@@ -291,12 +283,7 @@
   font-size: 14px;
   box-shadow: 0 0 0 1px #ddd;
   color: inherit;
-  /*&:nth-child(4n+4) {
-        margin-right: 0;
-    }
-    &:nth-last-child(-n+4) {
-        margin-bottom: 0;
-    }*/
+  
 }
 .iconpicker .iconpicker-item:hover:not(.iconpicker-selected) {
   background-color: #eee;

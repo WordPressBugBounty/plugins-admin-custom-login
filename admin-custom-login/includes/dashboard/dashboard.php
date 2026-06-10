@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-default content-panel">
+	<div class="panel panel-primary panel-default content-panel col-md-6">
 		<div class="panel-body">
 			<table class="form-table">
 				<tr>
@@ -51,9 +51,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					<td>
 						<h4><?php esc_html_e('Copy below link and open in another browser where you are not logged in', 'admin-custom-login')?></h4>
 						<br>
-						<pre><span id="login_form_image" style="color:#ef4238"><?php echo esc_url( wp_login_url() ); ?></span></pre>
+						<pre><span id="login_form_image" class="text-red"><?php echo esc_url( wp_login_url() ); ?></span></pre>
 
-						<a style="color: #555;" href="javascript:void(0);" onclick="window.open('<?php echo esc_url( wp_login_url() ); ?>')">
+						<a class="text-gray" href="javascript:void(0);" onclick="window.open('<?php echo esc_url( wp_login_url() ); ?>')">
                             <button type="button" class="preview_btn_custom btn btn-primary" id="preview_btn_custom"><?php esc_html_e('Preview', 'admin-custom-login')?></button>
                         </a>
                          <button type="button" class="preview_btn_custom_copy btn btn-success" id="preview_btn_custom_copy" value="<?php echo esc_url( wp_login_url() ); ?>"><?php esc_html_e('Copy', 'admin-custom-login')?></button>
@@ -61,6 +61,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					</td>
 				</tr>
 			</table>
+		</div>
+	</div>
+
+	<div class="col-md-12 save-card-block save-card-block-custom">
+		<div class="save-button-block save-button-block-custom">
+			<button type="button" onclick="return Custom_login_dashboard('dashboardSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes', 'admin-custom-login');?></button>
+			<button type="button" onclick="return Custom_login_dashboard('dashboardReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default', 'admin-custom-login');?></button>
 		</div>
 	</div>
 
@@ -93,12 +100,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-primary save-button-block">
-		<div class="panel-body">
-				<button type="button" onclick="return Custom_login_dashboard('dashboardSave', '');" class="btn btn-info btn-lg"><?php esc_html_e('Save Changes', 'admin-custom-login');?></button>
-				<button type="button" onclick="return Custom_login_dashboard('dashboardReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e('Reset Default', 'admin-custom-login');?></button>
-		</div>
-	</div>
 </div>
 <!-- /row -->
 
@@ -112,7 +113,7 @@ function dashboard_print_scripts() {
 }
 
 if(isset($_POST['Action'])) {
-	$Action = sanitize_text_field($_POST['Action']);
+	$Action = (isset($_POST["Action"]) ? sanitize_text_field($_POST["Action"]) : "");
 
 	//Save
 	if($Action == "dashboardSave") {
@@ -120,7 +121,7 @@ if(isset($_POST['Action'])) {
 			die('Not authorized');
 		}
 		else {
-			$dashboard_status = sanitize_text_field($_POST['dashboard_status']);
+			$dashboard_status = (isset($_POST["dashboard_status"]) ? sanitize_text_field($_POST["dashboard_status"]) : "");
 			// save values in option table
 			$dashboard_page= serialize(array(
 				'dashboard_status' => $dashboard_status

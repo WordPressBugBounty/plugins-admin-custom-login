@@ -153,11 +153,15 @@ $js = ' ';
 				</tr>
 
 			</table>
+			<div class="save-button-block">
+				<button type="button" onclick="return Custom_gcaptcha('googleSave', '');" class="btn btn-info btn-lg"><?php esc_html_e( 'Save Changes', 'admin-custom-login' ); ?></button>
+				<button type="button" onclick="return Custom_gcaptcha('googleReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e( 'Reset Default', 'admin-custom-login' ); ?></button>
+			</div>
 		</div>
 	</div>
 	
-	<button data-dialog49="somedialog49" class="dialog-button49"><?php esc_html_e( 'Open Dialog', 'admin-custom-login' ); ?></button>
-	<div id="somedialog49" class="dialog">
+	<button data-dialog49="somedialog49" class="dialog-button49 d-none"><?php esc_html_e( 'Open Dialog', 'admin-custom-login' ); ?></button>
+	<div id="somedialog49" class="dialog dialog-fixed-z">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
 			<div class="morph-shape" data-morph-open="M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33" data-morph-close="M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33">
@@ -170,8 +174,8 @@ $js = ' ';
 			</div>
 		</div>
 	</div>
-	<button data-dialog109="somedialog109" class="dialog-button109"><?php esc_html_e( 'Open Dialog', 'admin-custom-login' ); ?></button>
-	<div id="somedialog109" class="dialog">
+	<button data-dialog109="somedialog109" class="dialog-button109 d-none"><?php esc_html_e( 'Open Dialog', 'admin-custom-login' ); ?></button>
+	<div id="somedialog109" class="dialog dialog-fixed-z">
 		<div class="dialog__overlay"></div>
 		<div class="dialog__content">
 			<div class="morph-shape" data-morph-open="M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33" data-morph-close="M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33">
@@ -184,209 +188,24 @@ $js = ' ';
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-primary save-button-block">
-		<div class="panel-body">
-				<button type="button" onclick="return Custom_gcaptcha('googleSave', '');" class="btn btn-info btn-lg"><?php esc_html_e( 'Save Changes', 'admin-custom-login' ); ?></button>
-				<button type="button" onclick="return Custom_gcaptcha('googleReset', '');" class="btn btn-primary btn-lg"><?php esc_html_e( 'Reset Default', 'admin-custom-login' ); ?></button>
-		</div>
-	</div>
 </div>
 <!-- /row -->
-<?php // ob_start(); ?>
-<script type="text/javascript">
-	var recaptcha_keys_v2 = jQuery('.recaptcha_keys_v2');
-	var recaptcha_keys_v3 = jQuery('.recaptcha_keys_v3');
-	recaptcha_keys_v2.hide();
-	recaptcha_keys_v3.hide();
-	var current_recaptcha_v = '<?php echo esc_attr( $login_v_gcaptcha ); ?>';
-	if('v2' == current_recaptcha_v) {
-		recaptcha_keys_v2.show();
-	} else {
-		recaptcha_keys_v3.show();
-	}
-	jQuery(document).on('change', 'input[name="v_gacptcha"]', function() {
-		if('v3' === this.value) {
-			recaptcha_keys_v2.hide();
-			recaptcha_keys_v3.show();
-		} else {
-			recaptcha_keys_v3.hide();
-			recaptcha_keys_v2.show();
-		}
-	});
-	function Custom_gcaptcha(Action, id){
-		if(Action == "googleSave") {
-			(function(){
-				var dlgtrigger = document.querySelector( '[data-dialog49]' ),
-					somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog49' ) ),
-					// svg..
-					morphEl = somedialog.querySelector( '.morph-shape' ),
-					s = Snap( morphEl.querySelector( 'svg' ) ),
-					path = s.select( 'path' ),
-					steps = { 
-						open : morphEl.getAttribute( 'data-morph-open' ),
-						close : morphEl.getAttribute( 'data-morph-close' )
-					},
-					dlg = new DialogFx( somedialog, {
-						onOpenDialog : function( instance ) {
-							// animate path
-							setTimeout(function() {
-								path.stop().animate( { 'path' : steps.open }, 1500, mina.elastic );
-							}, 250 );
-						},
-						onCloseDialog : function( instance ) {
-							// animate path
-							path.stop().animate( { 'path' : steps.close }, 250, mina.easeout );
-						}
-					} );
-				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-			})();
-
-			var site_key = jQuery("#site-key").val();
-			var secret_key = jQuery("#secret-key").val();
-			var site_key_v3 = jQuery("#site-key-v3").val();
-			var secret_key_v3 = jQuery("#secret-key-v3").val();
-			if (document.getElementById('login_v_gcaptcha1').checked) {
-				var login_v_gcaptcha = document.getElementById('login_v_gcaptcha1').value;
-			} else {
-				var login_v_gcaptcha = document.getElementById('login_v_gcaptcha2').value;
-			}
-			if (document.getElementById('login_enable_gcaptcha1').checked) {
-				var login_enable_gcaptcha = document.getElementById('login_enable_gcaptcha1').value;
-			} else {
-				var login_enable_gcaptcha = document.getElementById('login_enable_gcaptcha2').value;
-			}
-
-			if (document.getElementById('acl_gcaptcha_theme1').checked) {
-				var acl_gcaptcha_theme = document.getElementById('acl_gcaptcha_theme1').value;
-			} else {
-				var acl_gcaptcha_theme = document.getElementById('acl_gcaptcha_theme2').value;
-			}
-			
-			var PostData = "Action=" + Action + "&site_key=" + site_key + "&secret_key=" + secret_key + "&site_key_v3=" + site_key_v3 + "&secret_key_v3=" + secret_key_v3 + "&login_v_gcaptcha=" + login_v_gcaptcha + "&login_enable_gcaptcha=" + login_enable_gcaptcha + "&acl_gcaptcha_theme=" + acl_gcaptcha_theme;
-			
-			jQuery.ajax({
-				dataType : 'html',
-				type: 'POST',
-				url : location.href,
-				cache: false,
-				//data : PostData,
-				data: {
-					nonce_ajax : WEBLIZARADMINNONCE.adminsecurity,
-					Action : Action,
-					site_key : site_key,
-					secret_key : secret_key,
-					site_key_v3 : site_key_v3,
-					secret_key_v3 : secret_key_v3,
-					login_v_gcaptcha : login_v_gcaptcha,
-					login_enable_gcaptcha : login_enable_gcaptcha,
-					acl_gcaptcha_theme : acl_gcaptcha_theme,
-				},
-				complete : function() { alert(captcha); },
-				success: function(data) {
-					// Save message box open
-					jQuery(".dialog-button49").click();
-					// Function to close message box
-					setTimeout(function(){
-						jQuery("#dialog-close-button49").click();
-					}, 1000);
-				}
-			});
-		}
-		
-		// Save Message box Close On Mouse Hover
-		document.getElementById('dialog-close-button49').disabled = false;
-		jQuery('#dialog-close-button49').hover(function () {
-			jQuery("#dialog-close-button49").click();
-			document.getElementById('dialog-close-button49').disabled = true; 
-		});
-		
-		// Reset Message box Close On Mouse Hover
-		document.getElementById('dialog-close-button109').disabled = false;
-		jQuery('#dialog-close-button109').hover(function () {
-		jQuery("#dialog-close-button109").click();
-		document.getElementById('dialog-close-button109').disabled = true; 
-		});
-		
-		if(Action == "googleReset") {		
-			(function(){
-				var dlgtrigger = document.querySelector( '[data-dialog109]' ),
-					somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog109' ) ),
-					// svg..
-					morphEl = somedialog.querySelector( '.morph-shape' ),
-					s = Snap( morphEl.querySelector( 'svg' ) ),
-					path = s.select( 'path' ),
-					steps = { 
-						open : morphEl.getAttribute( 'data-morph-open' ),
-						close : morphEl.getAttribute( 'data-morph-close' )
-					},
-					dlg = new DialogFx( somedialog, {
-						onOpenDialog : function( instance ) {
-							// animate path
-							setTimeout(function() {
-								path.stop().animate( { 'path' : steps.open }, 1500, mina.elastic );
-							}, 250 );
-						},
-						onCloseDialog : function( instance ) {
-							// animate path
-							path.stop().animate( { 'path' : steps.close }, 250, mina.easeout );
-						}
-					} );
-				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-			})();
-			
-			var PostData = "Action=" + Action ;
-			jQuery.ajax({
-				dataType : 'html',
-				type: 'POST',
-				url : location.href,
-				cache: false,
-				//data : PostData,
-				data: {
-					nonce_ajax : WEBLIZARADMINNONCE.adminsecurity,
-					Action : Action,
-				},
-				complete : function() {  },
-				success: function(data) {
-					
-					document.getElementById("site-key").value ="";
-					document.getElementById("secret-key").value ="";
-					document.getElementById("site-key-v3").value ="";
-					document.getElementById("secret-key-v3").value ="";
-					jQuery(document).ready( function() {
-						jQuery('input[name=enable_gcaptcha]').val(['yes']);
-					});
-					jQuery(document).ready( function() {
-						jQuery('input[name=acl_gcaptcha_theme]').val(['yes']);
-					});
-
-					// Reset message box open
-					jQuery(".dialog-button109").click();
-					// Function to close message box
-					setTimeout(function(){
-						jQuery("#dialog-close-button109").click();
-					}, 1000);
-				}
-			});
-		}
-	}
-</script>
-	<?php // $js .= ob_get_clean(); ?>
 <?php
 
 if ( isset( $_POST['Action'] ) ) {
-	$Action = sanitize_text_field( $_POST['Action'] );
+	$Action = (isset($_POST["Action"]) ? sanitize_text_field($_POST["Action"]) : "");
 	if ( ! wp_verify_nonce( $_POST['nonce_ajax'], 'weblizar_admin_nonce' ) ) {
 		die( 'Not authorized' );
 	} else {
 		// Save Page Values
 		if ( $Action == 'googleSave' ) {
-			$site_key              = sanitize_text_field( $_POST['site_key'] );
-			$secret_key            = sanitize_text_field( $_POST['secret_key'] );
-			$site_key_v3           = sanitize_text_field( $_POST['site_key_v3'] );
-			$secret_key_v3         = sanitize_text_field( $_POST['secret_key_v3'] );
-			$login_v_gcaptcha      = sanitize_text_field( $_POST['login_v_gcaptcha'] );
-			$login_enable_gcaptcha = sanitize_text_field( $_POST['login_enable_gcaptcha'] );
-			$acl_gcaptcha_theme    = sanitize_text_field( $_POST['acl_gcaptcha_theme'] );
+			$site_key              = (isset($_POST["site_key"]) ? sanitize_text_field($_POST["site_key"]) : "");
+			$secret_key            = (isset($_POST["secret_key"]) ? sanitize_text_field($_POST["secret_key"]) : "");
+			$site_key_v3           = (isset($_POST["site_key_v3"]) ? sanitize_text_field($_POST["site_key_v3"]) : "");
+			$secret_key_v3         = (isset($_POST["secret_key_v3"]) ? sanitize_text_field($_POST["secret_key_v3"]) : "");
+			$login_v_gcaptcha      = (isset($_POST["login_v_gcaptcha"]) ? sanitize_text_field($_POST["login_v_gcaptcha"]) : "");
+			$login_enable_gcaptcha = (isset($_POST["login_enable_gcaptcha"]) ? sanitize_text_field($_POST["login_enable_gcaptcha"]) : "");
+			$acl_gcaptcha_theme    = (isset($_POST["acl_gcaptcha_theme"]) ? sanitize_text_field($_POST["acl_gcaptcha_theme"]) : "");
 
 			// save values in option table
 			$g_page = serialize(

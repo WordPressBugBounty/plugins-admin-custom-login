@@ -16,7 +16,10 @@ require_once('get_value.php');
 				<span class="icon-bar"></span>
 			</button>
 			<a class="sidebar-toggle hidden-xs" href="javascript:void(0);"><i class="fa fa-bars fa-2x"></i></a>
-			<a class="navbar-brand coming-soon-admin-title" href="index.html" style="color:#dc3545;"><?php esc_html_e('Admin Custom Login', 'admin-custom-login'); ?></a>
+			<a class="navbar-brand coming-soon-admin-title" href="javascript:void(0);">
+				<?php esc_html_e('Admin Custom Login', 'admin-custom-login'); ?>
+				<span class="weblizar-brand-subtitle"><?php esc_html_e('by Weblizar', 'admin-custom-login'); ?></span>
+			</a>
 		</div>
 		<!-- /.navbar-header -->
 		<ul class="nav navbar-top-links navbar-right coming-soon-top">
@@ -39,6 +42,9 @@ require_once('get_value.php');
 			<!-- /.dropdown -->
 		</ul>
 		<!-- /.navbar-top-links -->
+		<a class="header-buy-now-btn" href="https://weblizar.com/plugins/admin-custom-login-pro/" target="_blank" rel="noopener noreferrer">
+			<i class="fa fa-shopping-cart"></i> <?php esc_html_e('Buy Now:', 'admin-custom-login'); ?> <span class="btn-price-tag"><?php esc_html_e('Only at $25', 'admin-custom-login'); ?></span>
+		</a>
 		<div class="navbar-default sidebar" role="navigation">
 			<div class="sidebar-nav navbar-collapse">
 				<ul class="nav " id="side-menu">
@@ -139,14 +145,15 @@ require_once('get_value.php');
 							<span class="sidebar-item-subtitle"><?php esc_html_e('ask your queries', 'admin-custom-login'); ?></span>
 						</a>
 					</li>
-					
+
 					<li>
 						<a href="#" id="ui-id-10">
 							<span class="sidebar-item-icon fa-stack">
 								<i class="fa fa-square fa-stack-2x text-primary"></i>
 								<i class="fa fa-star fa-stack-1x fa-inverse"></i>
 							</span>
-							<!-- <span class="sidebar-item-title"><?php // esc_html_e('Rate & Donate to Us', 'admin-custom-login'); ?></span> -->
+							<!-- <span class="sidebar-item-title"><?php // esc_html_e('Rate & Donate to Us', 'admin-custom-login'); 
+																	?></span> -->
 							<span class="sidebar-item-title"><?php esc_html_e('Rate', 'admin-custom-login'); ?></span>
 							<span class="sidebar-item-subtitle"><?php esc_html_e('if you like us', 'admin-custom-login'); ?></span>
 						</a>

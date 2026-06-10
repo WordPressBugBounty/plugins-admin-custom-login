@@ -142,3 +142,27 @@ jQuery('document').ready(function(){
 		  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 	});
 });
+
+jQuery(document).ready(function() {
+    function updateAllSliderHandles() {
+        jQuery('.size-slider').each(function() {
+            var $slider = jQuery(this);
+            var $handle = $slider.find('.ui-slider-handle');
+            if ($handle.length) {
+                var val = $slider.slider('value');
+                if ($handle.text() !== String(val)) {
+                    $handle.text(val);
+                }
+            }
+        });
+    }
+
+    jQuery('body').on('slide slidechange slidecreate', '.size-slider', function(event, ui) {
+        var $slider = jQuery(this);
+        var $handle = $slider.find('.ui-slider-handle');
+        var val = (ui && ui.value !== undefined) ? ui.value : $slider.slider('value');
+        $handle.text(val);
+    });
+
+    setInterval(updateAllSliderHandles, 250);
+});

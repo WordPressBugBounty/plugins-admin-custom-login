@@ -736,3 +736,19 @@ jQuery(document).ready(function(){
 	}
 	
 });
+
+jQuery(document).ready(function() {
+	function updateLoginBgPreviews() {
+		var val = jQuery("#select-login-bg").val();
+		jQuery("#preview-login-bg-color, #preview-login-bg-image").hide();
+		if (val === "static-background-color") {
+			jQuery("#preview-login-bg-color").show();
+		} else if (val === "static-background-image") {
+			jQuery("#preview-login-bg-image").show();
+		}
+	}
+	jQuery("#select-login-bg").on("change", updateLoginBgPreviews);
+	updateLoginBgPreviews();
+	setTimeout(updateLoginBgPreviews, 100);
+	setTimeout(updateLoginBgPreviews, 500);
+});
